@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Matematika - JNY Alliance</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <style>
+        .icon-block {
+            padding: 0 15px;
+        }
+
+        .icon-block .material-icons {
+            font-size: inherit;
+        }
+    </style>
+
+    <!-- KateX (https://katex.org/) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+        integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.getElementById('body'));"></script>
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">JNY Alliance</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">SPPKDV</a></li>
+                <li><a href="/erlangga.html">Erlangga Web Viewer</a></li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="/">SPPKDV</a></li>
+                <li><a href="/erlangga.html">Erlangga Web Viewer</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <!-- PAGE CONTENT START -->
+    <div class="container" id="body">
+        <div class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Erlangga QR Code Viewer</span>
+                            <hr />
+                            <b>MENGAPA DIPERLUKAN WEB VIEWER VERSI WEB?</b>
+                            <br><p>Salah satu masalah yang saya lihat ketika belajar secara daring dan ingin mendengarkan atau melihat video dan audio yang terdapat pada buku. Tidak semua orang bisa membuka aplikasi erlangga atau hanya akan merepotkan saja. Jadi diperlukanlah Viewer seperti ini agar satu orang dapat membuka kontennya dan membagikannya kepada semua orang menggunakan Screen Sharing.</p>
+                            <hr />
+                            <p>
+                            Instruksi:<br />Gunakan aplikasi untuk membaca QR code yang terdapat dalam barcode. Lalu tempelkan/paste tautan yang didapatkan ke kolom berikut
+                            </p>
+                            <br>
+                            <form onsubmit="return erlangga()">
+                                <div class="input-field">
+                                    <input id="input_url" type="text" class="validate" />
+                                    <label for="input_url">Tautan/URL/Link</label>
+                                </div>
+                                <button class="btn btn-primary">BUKA VIDEO</button>
+                            </form>
+                        </div>
+                    </div>
+                    <br><br><br><br>
+                    <form id="erlangga_form" action="/toChange" method="POST" style="display: none;">
+                        <input type="hidden" name="login_device_id" value="9774d56d682e549c">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function erlangga(){
+            let url = document.getElementById('input_url').value;
+            let form = document.getElementById('erlangga_form');
+            form.action = url.replace('http://', 'https://');
+            alert('Jangan lupa tekan tombol BACK/Kembali setelah selesai untuk kembali ke halaman ini.');
+            form.submit();
+            return false;
+        }
+    </script>
+    <!-- PAGE CONTENT ENDS -->
+
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">JNY Alliance</h5>
+                    <p class="grey-text text-lighten-4">
+                        This project is made for the members of JNY Alliance, and invited
+                        guests. We will not be responsible for any damage or harm caused
+                        by this application.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">Made by <b>Jason</b></div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                $(".sidenav").sidenav();
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
