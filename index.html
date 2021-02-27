@@ -141,23 +141,30 @@
                         : "Tidak bersentuhan";
             }
 
-            let x_1 = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            let x_1 = (-b + Math.sqrt(discriminant)) / (2 * a);
             x_1 = Math.round((x_1 + Number.EPSILON) * 100) / 100;
             x_1_rational = find_rational(x_1, 10);
 
-            let x_2 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            let x_2 = (-b - Math.sqrt(discriminant)) / (2 * a);
             x_2 = Math.round((x_2 + Number.EPSILON) * 100) / 100;
             x_2_rational = find_rational(x_2, 10);
 
+            x_1_negated = x_1 * -1;
+            x_2_negated = x_2 * -1;
+
             x_1_fracturized = katex.renderToString(`x₁ = \\frac{${x_1_rational.numerator}}{${x_1_rational.denominator}}`, {throwOnError: false});
             x_2_fracturized = katex.renderToString(`x₂ = \\frac{${x_2_rational.numerator}}{${x_2_rational.denominator}}`, {throwOnError: false});
+
+            x_1_factorized = (x_1_negated < 0) ? x_1_negated : `+${x_2_negated}`;
+            x_2_factorized = (x_2_negated < 0) ? x_2_negated : `+${x_2_negated}`;
+            factorized = katex.renderToString(`(x${x_1_factorized})(x${x_2_factorized})`, {throwOnError: false});
 
             document.getElementById("output_result").innerHTML = 
             `<p>Garis <b>${line_text}</b> (diskriminan = ${discriminant})</p>
             <p>X (satu): <b>${x_1}</b></p>
             <p>X (dua): <b>${x_2}</b></p>
             <hr><br>
-            <div id="fractions" style="font-size: 30px;">${x_1_fracturized}<br><br>${x_2_fracturized}</div>`;
+            <div style="font-size: 30px;">${factorized}<br><br>${x_1_fracturized}<br><br>${x_2_fracturized}</div>`;
 
             document.getElementById("hasil_perhitungan").style.display = "block";
             return false;
