@@ -333,7 +333,7 @@
 
             displayElement.innerHTML = `${(tolerated) ? 'Sisa toleransi' : 'Mulai dalam'}: ${days}${hours}:${minutes}:${seconds}`;
 
-            if (--timer < 0) {
+            if (!tolerated) {
                 if (timer < 30 * 60 && timer > 15 * 60 && !notified_30) {
                     notified_30 = true;
                     sendNotification("Kurang dari 30 menit lagi!", {
@@ -355,7 +355,9 @@
                         body: `Segera masuk kedalam kelas jika belum.`
                     });
                 }
-                
+            }
+
+            if (--timer < 0) {
                 displayElement.innerHTML = `Kelas dimulai.`;
                 if (tolerance - timer < 0) {
                     tolerated = true;
