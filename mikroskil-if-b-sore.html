@@ -213,9 +213,10 @@
 
     function getStamp(offset = 0) {
         // Set offset for the day class started
-        const date = new Date(2023, 9, 18),
-              t_date = (new Date);
-        date.setFullYear(t_date.getFullYear(), t_date.getMonth(), t_date.getDate() + offset);
+        const date = (new Date);
+        date.setDate(date.getDate() + offset);
+        console.log("Searching for class in date:", date);
+        // date.setFullYear(date.getFullYear(), date.getMonth(), date.getDate() + offset);
 
         // Week starts from week 38 (18 Sept 2023)
         const startingWeek = 38;
