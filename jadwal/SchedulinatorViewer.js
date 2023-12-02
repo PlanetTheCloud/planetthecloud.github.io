@@ -8,7 +8,28 @@ const SchedulinatorViewer = {
         metadata: document.getElementById('classMetadata')
     },
     navigation: {
+        pagesElement: {
+            today: document.getElementById('page_today'),
+            all: document.getElementById('page_all')
+        },
+        afterNavigationCallback: {
+            all: function() {
+                SchedulinatorViewer.handleShowAllData();
+            }
+        },
+        to(page) {
+            if (!Object.keys(this.pagesElement).includes(page)) {
+                return false;
+            }
+            Object.values(this.pagesElement).forEach(e => {
+                e.classList.add('d-none');
+            });
+            document.getElementById(`page_${page}`).classList.remove('d-none');
 
+            if (Object.keys(this.afterNavigationCallback).includes(page)) {
+                this.afterNavigationCallback[page]();
+            }
+        }
     },
     timer: {
         format(display) {
@@ -142,12 +163,13 @@ const SchedulinatorViewer = {
         let classroomAndTimeIndicator = '';
         if (["REGULAR", "REPLACEMENT", "EXAM"].includes(details.type)) {
             meetingTypeIndicator = `<li class="list-group-item bg-${details.location.color}"><b class="text-white">${details.location.text} (PERT. ${details.meetingCount})</b></li>`;
+            classroomIndicator = (["LANGSUNG"].includes(details.location.text)) ? `<div class="col-6 border-end align-self-center">
+                <b>${details.classroom ?? "Lihat Kartu Ujian"}</b>
+            </div>` : '';
             classroomAndTimeIndicator = `<li class="list-group-item">
                 <div class="row">
-                    <div class="col-6 border-end align-self-center">
-                        <b>${details.classroom ?? "Lihat Kartu Ujian"}</b>
-                    </div>
-                    <div class="col-6 border-start align-self-center">
+                    ${classroomIndicator}
+                    <div class="col-${(classroomIndicator) ? '6 border-start' : '12'} align-self-center">
                         <b>${details.time.start} — ${details.time.end}</b>
                     </div>
                 </div>
@@ -202,12 +224,12 @@ const SchedulinatorViewer = {
 
         return {
             html:
-                `<div class="col-12">
-                <div class="card mb-3">
+                `<div class="col-12 mb-3-notlast">
+                <div class="card">
                     <ul class="list-group list-group-flush text-center">
                         ${examIndicator}
+                        <li class="list-group-item bg-grey text-white"><b class="font-larger">${details.subject}</b></li>
                         ${meetingTypeIndicator}
-                        <li class="list-group-item"><b class="font-larger">${details.subject}</b></li>
                         ${classroomAndTimeIndicator}
                         ${timerIndicator}
                     </ul>
@@ -250,9 +272,7 @@ const SchedulinatorViewer = {
         this.run();
 
         form.code.classList.remove('is-invalid');
-
-        // TODO: Save schedule code
-
+        document.getElementById('scheduleCodePrompt').classList.add('d-none');
         return false;
     },
     handleDateInput(form) {
@@ -269,6 +289,60 @@ const SchedulinatorViewer = {
         this.runSpecificDate(new Date(form.date.value));
         return false;
     },
+    handleShowAllData() {
+        if (!this.metadata) {
+            return false;
+        }
+
+        const regularClasses = Object.values(Schedulinator.data.raw.schedules.regularClasses);
+        let dataHtml = '';
+        let locations = regularClasses.map((e) => {
+            return {
+                subject: e.subject,
+                location: e.location.map((l) => Schedulinator.translateLocationId(l))
+            }
+        });
+        locations.forEach((e) => {
+            let list = '';
+            e.location.forEach((l) => {
+                list += `<td class="bg-${l.color} text-white align-middle text-center"><b>${l.text}</b></td>`;
+            })
+            dataHtml += `<tr>
+                <td><b>${e.subject}</b></td>
+                ${list}
+            </tr>`;
+        });
+        document.getElementById('scheduleAll_location').innerHTML = dataHtml;
+
+        const metadata = Schedulinator.data.raw.metadata;
+        dataHtml = '';
+        for (key in metadata) {
+            dataHtml += `<tr>
+                <td>${key}</td>
+                <td>${metadata[key]}</td>
+            </tr>`;
+        }
+        document.getElementById('scheduleAll_meta').innerHTML = dataHtml;
+
+        const cached = Schedulinator.data.cached;
+        dataHtml = '';
+        for (key in cached) {
+            let shouldBold = true;
+            Object.values(cached[key]).forEach(e => {
+                const readable = this.parseToReadableDate(Schedulinator.stringToDate(key));
+                dataHtml += `<tr>
+                    <td>${shouldBold ? `<b>${key}</b>` : key}</td>
+                    <td>${shouldBold ? `<b>${readable}</b>` : readable}</td>
+                    <td>${e.meetingCount ?? '-'}</td>
+                    <td>${e.subject}</td>
+                    <td>${e.location?.text ?? '-'}</td>
+                    <td>${e.type}</td>
+                </tr>`;
+                shouldBold = false;
+            });
+        }
+        document.getElementById('scheduleAll_data').innerHTML = dataHtml;
+    },
     handleClearData() {
         Schedulinator.clearStoredData();
         location.reload();
@@ -280,6 +354,7 @@ const SchedulinatorViewer = {
         // Handle metadata
         let meta = Schedulinator.getMetadata();
         if (!meta) {
+            document.getElementById('scheduleCodePrompt').classList.remove('d-none');
             return;
         }
         this.elements.metadata.innerHTML = this.renderMetadata(meta);
@@ -288,15 +363,16 @@ const SchedulinatorViewer = {
         this.runSpecificDate(new Date);
 
         // Show
-        document.getElementById('scheduleToday').classList.remove('d-none');
+        this.navigation.to('today');
+        document.getElementById('page_today').classList.remove('d-none');
     }
 }
 
 addEventListener("DOMContentLoaded", (event) => {
     // Prefill the date input
     let today = new Date;
-    [...document.getElementsByClassName('classDate')].forEach(e => {
-        e.value = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+    [...document.getElementsByClassName("classDate")].forEach(e => {
+        e.value = `${today.getFullYear()}-${today.getMonth() + 1}-${(today.getDate()) < 10 ? '0' : ''}${today.getDate()}`;;
     });
     
     SchedulinatorViewer.run();
