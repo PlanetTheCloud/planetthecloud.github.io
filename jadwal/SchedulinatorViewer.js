@@ -10,11 +10,15 @@ const SchedulinatorViewer = {
     navigation: {
         pagesElement: {
             today: document.getElementById('page_today'),
-            all: document.getElementById('page_all')
+            all: document.getElementById('page_all'),
+            editor: document.getElementById('page_editor')
         },
         afterNavigationCallback: {
             all: function() {
                 SchedulinatorViewer.handleShowAllData();
+            },
+            editor: function() {
+                
             }
         },
         to(page) {
@@ -226,9 +230,9 @@ const SchedulinatorViewer = {
             html:
                 `<div class="col-12 mb-3-notlast">
                 <div class="card">
-                    <ul class="list-group list-group-flush text-center">
+                    <ul class="list-group list-group-flush text-center border">
                         ${examIndicator}
-                        <li class="list-group-item bg-grey text-white"><b class="font-larger">${details.subject}</b></li>
+                        <li class="list-group-item"><b class="font-larger">${details.subject}</b></li>
                         ${meetingTypeIndicator}
                         ${classroomAndTimeIndicator}
                         ${timerIndicator}
@@ -379,7 +383,9 @@ const SchedulinatorViewer = {
 
         // Show
         this.navigation.to('today');
-        document.getElementById('page_today').classList.remove('d-none');
+
+        // TODO: TEMPORARY. PLEASE REMOVE
+        //this.navigation.to('editor');
     }
 }
 
