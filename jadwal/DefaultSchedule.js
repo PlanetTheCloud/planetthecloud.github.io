@@ -102,7 +102,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 2, 0],
+                    location: [1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 2, 1],
                 },
                 {
                     subject: "Pemikiran Desain",
@@ -265,6 +265,103 @@ const DEFAULT_SCHEDULE = {
                     subject: "Pemrograman Komputer PRAKTEK",
                     date: "20-12-2023",
                     type: "REPLACEMENT",
+                },
+                {
+                    subject: "Pengembangan Karakter: Kepemimpinan",
+                    date: "17-01-2024",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Minggu Tenang",
+                    date: {
+                        start: "15-01-2024",
+                        end: "20-01-2024"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Pemikiran Desain",
+                    examType: "UAS",
+                    date: "22-01-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Wawasan Informatika",
+                    examType: "UAS",
+                    date: "22-01-2024",
+                    type: "EXAM",
+                    classroom: "B.T3/L3,B.T5/L3",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pemrograman Komputer TEORI",
+                    examType: "UAS",
+                    date: "22-01-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Pemrograman Komputer PRAKTEK",
+                    examType: "UAS",
+                    date: "22-01-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Sistem Otomasi Perkantoran",
+                    examType: "UAS",
+                    date: "22-01-2024",
+                    type: "EXAM",
+                    classroom: "A.P3/L2 - Lab 1",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Karakter: Kepemimpinan",
+                    examType: "UAS",
+                    date: "22-01-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 2,
                 },
             ]
         }
