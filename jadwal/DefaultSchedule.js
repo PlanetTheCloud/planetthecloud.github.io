@@ -399,7 +399,7 @@ const DEFAULT_SCHEDULE = {
                  * @property {int[]} location Where the class is being held (0 = Unknown, 1 = Onsite, 2 = Online)
                  */
                 {
-                    subject: "Pengembangan Web Front-End",
+                    subject: "Pengembangan Web Front-End TEORI",
                     day: [1],
                     type: "REGULAR",
                     classroom: "B.T3/L2",
@@ -415,7 +415,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
                 },
                 {
                     subject: "Pemodelan dan Implementasi Basis Data",
@@ -434,7 +434,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 2, 1, 2, 1, 2, 2, 1, 1, 1, 2, 2, 1, 2, 2],
                 },
                 {
                     subject: "Literasi Digital",
@@ -451,7 +451,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
-                    subject: "Pengembangan Web Front-End",
+                    subject: "Pengembangan Web Front-End PRAKTEK",
                     day: [3],
                     type: "REGULAR",
                     classroom: "A.P1/L4 - Lab 7",
@@ -476,7 +476,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "18:30",
                         },
                     ],
-                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
                 },
                 {
                     subject: "Pemikiran Komputasional PRAKTEK",
@@ -504,7 +504,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "18:00",
                         },
                     ],
-                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 2, 1, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 2, 1],
                 },
             ],
             events: [
@@ -514,7 +514,7 @@ const DEFAULT_SCHEDULE = {
                     type: "BREAK",
                     time: [
                         {
-                            start: "19:10",
+                            start: "19:05",
                             end: "19:30"
                         }
                     ],
@@ -524,6 +524,69 @@ const DEFAULT_SCHEDULE = {
                 /**
                  * Types: HOLIDAY, EXAM, REPLACEMENT (Kelas Pengganti)
                  */
+                {
+                    subject: "Hari Suci Nyepi",
+                    date: "11-03-2024",
+                    type: "HOLIDAY"
+                },
+                // {
+                //     subject: "Cuti Bersama Hari Suci Nyepi",
+                //     date: "12-03-2024",
+                //     type: "HOLIDAY"
+                // },
+                {
+                    subject: "Wafat Isa Almasih",
+                    date: "29-03-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Paskah",
+                    date: "31-03-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Raya Idul Fitri",
+                    date: {
+                        start: "10-03-2024",
+                        end: "11-03-2024"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Buruh",
+                    date: "01-05-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Kenaikan Isa Almasih",
+                    date: "09-05-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Raya Waisak",
+                    date: "23-05-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Lahir Pancasila",
+                    date: "01-06-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Raya Idul Adha",
+                    date: "17-06-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Tahun Baru Islam",
+                    date: "07-07-2024",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Hari Kemerdekaan RI",
+                    date: "17-08-2024",
+                    type: "HOLIDAY"
+                },
             ]
         }
     }
