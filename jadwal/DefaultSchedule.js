@@ -920,5 +920,158 @@ const DEFAULT_SCHEDULE = {
                 },
             ]
         }
+    },
+    "3-IFBSORE-2324": {
+        metadata: {
+            identifier: "3-IFBSORE-2324", // In case we want to make it server-based
+            major: "S-1 / Teknik Informatika",
+            class: "IF-B-SORE",
+            start: "17-09-2024", // 17 Sept 2024
+            end: "17-03-2025", // 17 Mar 2025
+            semester: 3,
+            academicYear: "2023/2024",
+            updated: "02-07-2024"
+        },
+        schedules: {
+            regularClasses: [
+                /**
+                 * @property {string} subject Subject name
+                 * @property {int[]} day Day of the class (1 = Monday, 2 = Tuesday, so on)
+                 * @property {string} type Class type (REGULAR, REPLACEMENT, EXAM, HOLIDAY)
+                 * @property {object[]} time Hour and minute when the class starts
+                 * @property {int[]} location Where the class is being held (0 = Unknown, 1 = Onsite, 2 = Online)
+                 */
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek TEORI",
+                    day: [1],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    professor: "Khristian Tanselmus, S.Kom., M.TI.",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:40",
+                        }
+                    ],
+                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                },
+                {
+                    subject: "Pengembangan Web Back-End TEORI",
+                    day: [2],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    professor: "Arwin Halim, S.Kom., M.Kom.",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:40",
+                        }
+                    ],
+                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek PRAKTEK",
+                    day: [3],
+                    type: "REGULAR",
+                    classroom: "A.P1/L2",
+                    professor: "Khristian Tanselmus, S.Kom., M.TI.",
+                    time: [
+                        {
+                            start: "19:20",
+                            end: "21:00",
+                            tolerance: "19:30",
+                        },
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Pengembangan Web Back-End PRAKTEK",
+                    day: [3],
+                    type: "REGULAR",
+                    classroom: "A.P4/L4",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10",
+                            tolerance: "17:40",
+                        },
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Rekayasa Data",
+                    day: [4],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:40",
+                        }
+                    ],
+                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    day: [5],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:45",
+                        },
+                    ],
+                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                },
+            ],
+            events: [
+                {
+                    subject: "Istirahat",
+                    day: [1, 2, 3, 4, 5],
+                    type: "BREAK",
+                    time: [
+                        {
+                            start: "19:05",
+                            end: "19:30"
+                        }
+                    ],
+                }
+            ],
+            overrides: [
+                /**
+                 * Types: HOLIDAY, EXAM, REPLACEMENT (Kelas Pengganti)
+                 */
+                {
+                    subject: "Maulid Nabi Muhammad SAW 1446H",
+                    date: "16-09-2024",
+                    type: "HOLIDAY"
+                },
+            ]
+        }
     }
 }
