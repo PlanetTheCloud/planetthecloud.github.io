@@ -923,7 +923,7 @@ const DEFAULT_SCHEDULE = {
     },
     "3-IFBSORE-2425": {
         metadata: {
-            identifier: "3-IFBSORE-2324", // In case we want to make it server-based
+            identifier: "3-IFBSORE-2425", // In case we want to make it server-based
             major: "S-1 / Teknik Informatika",
             class: "IF-B-SORE",
             start: "17-09-2024", // 17 Sept 2024
