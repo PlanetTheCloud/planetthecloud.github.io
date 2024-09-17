@@ -929,8 +929,8 @@ const DEFAULT_SCHEDULE = {
             start: "17-09-2024", // 17 Sept 2024
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
-            academicYear: "2023/2024",
-            updated: "02-07-2024"
+            academicYear: "2024/2025",
+            updated: "17-09-2024"
         },
         schedules: {
             regularClasses: [
@@ -959,7 +959,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 1, 1],
                 },
                 {
                     subject: "Pengembangan Web Back-End TEORI",
@@ -979,7 +979,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek PRAKTEK",
@@ -1070,6 +1070,21 @@ const DEFAULT_SCHEDULE = {
                     subject: "Maulid Nabi Muhammad SAW 1446H",
                     date: "16-09-2024",
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Pengembangan Web Back-End TEORI",
+                    date: "14-01-2025",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Pengembangan Web Back-End PRAKTEK",
+                    date: "15-01-2025",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Pengembangan Web Back-End PRAKTEK",
+                    date: "17-01-2025",
+                    type: "REPLACEMENT",
                 },
             ]
         }
