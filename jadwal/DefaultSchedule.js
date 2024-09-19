@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "19-09-2024b"
+            updated: "19-09-2024d"
         },
         schedules: {
             regularClasses: [
@@ -1072,23 +1072,13 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
-                    date: "04-11-2024",
-                    type: "REPLACEMENT",
-                },
-                {
-                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
-                    date: "06-11-2024",
-                    type: "REPLACEMENT",
-                },
-                {
                     subject: "Rekayasa Data",
-                    date: "26-11-2024",
+                    date: "26-09-2024",
                     type: "NOSHOW",
                 },
                 {
                     subject: "Rekayasa Data",
-                    date: "27-11-2024",
+                    date: "27-09-2024",
                     classroom: "Hall Gedung C",
                     time: [
                         {
@@ -1098,6 +1088,16 @@ const DEFAULT_SCHEDULE = {
                             notes: "Ga harus izin kalau gabisa datang karena akan disediakan recording"
                         }
                     ],
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
+                    date: "04-11-2024",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    date: "06-11-2024",
                     type: "REPLACEMENT",
                 },
                 {
