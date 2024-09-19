@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "19-09-2024a"
+            updated: "19-09-2024b"
         },
         schedules: {
             regularClasses: [
@@ -1052,23 +1052,12 @@ const DEFAULT_SCHEDULE = {
             events: [
                 {
                     subject: "Istirahat",
-                    day: [1, 2, 4, 5],
-                    type: "BREAK",
+                    day: [1, 2, 3, 4, 5],
+                    type: "BREAK",  
                     time: [
                         {
                             start: "19:10",
                             end: "19:30"
-                        }
-                    ],
-                },
-                {
-                    subject: "Istirahat",
-                    day: [3],
-                    type: "BREAK",
-                    time: [
-                        {
-                            start: "19:10",
-                            end: "19:20"
                         }
                     ],
                 }
