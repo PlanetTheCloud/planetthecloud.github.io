@@ -42,7 +42,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 },
                 {
-                    subject: "Pemrograman Komputer TEORI",
+                    subject: "Pemrograman Komputer (Teori)",
                     day: [2],
                     type: "REGULAR",
                     classroom: "B.T3/L2",
@@ -61,7 +61,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 2, 2, 2, 1, 1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 2],
                 },
                 {
-                    subject: "Pemrograman Komputer PRAKTEK",
+                    subject: "Pemrograman Komputer (Praktek)",
                     day: [3],
                     type: "REGULAR",
                     classroom: "A.P2/L2 - Lab 2",
@@ -163,7 +163,7 @@ const DEFAULT_SCHEDULE = {
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pemrograman Komputer TEORI",
+                    subject: "Pemrograman Komputer (Teori)",
                     examType: "UTS",
                     date: "13-11-2023",
                     type: "EXAM",
@@ -177,7 +177,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pemrograman Komputer PRAKTEK",
+                    subject: "Pemrograman Komputer (Praktek)",
                     examType: "UTS",
                     date: "13-11-2023",
                     type: "EXAM",
@@ -265,7 +265,7 @@ const DEFAULT_SCHEDULE = {
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pemrograman Komputer PRAKTEK",
+                    subject: "Pemrograman Komputer (Praktek)",
                     date: "20-12-2023",
                     type: "REPLACEMENT",
                 },
@@ -276,12 +276,12 @@ const DEFAULT_SCHEDULE = {
                     classroom: "C.T6/L3",
                 },
                 {
-                    subject: "Pemrograman Komputer PRAKTEK",
+                    subject: "Pemrograman Komputer (Praktek)",
                     date: "17-01-2024",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pemrograman Komputer TEORI",
+                    subject: "Pemrograman Komputer (Teori)",
                     date: "16-01-2024",
                     type: "REPLACEMENT",
                     classroom: "B.T2/L2",
@@ -323,7 +323,7 @@ const DEFAULT_SCHEDULE = {
                     location: 1,
                 },
                 {
-                    subject: "Pemrograman Komputer TEORI",
+                    subject: "Pemrograman Komputer (Teori)",
                     examType: "UAS",
                     date: "24-01-2024",
                     type: "EXAM",
@@ -337,7 +337,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pemrograman Komputer PRAKTEK",
+                    subject: "Pemrograman Komputer (Praktek)",
                     examType: "UAS",
                     date: "24-01-2024",
                     type: "EXAM",
@@ -402,7 +402,7 @@ const DEFAULT_SCHEDULE = {
                  * @property {int[]} location Where the class is being held (0 = Unknown, 1 = Onsite, 2 = Online)
                  */
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     day: [1],
                     type: "REGULAR",
                     classroom: "B.T3/L2",
@@ -454,7 +454,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 1, 2, 1, 2, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1],
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     day: [3],
                     type: "REGULAR",
                     classroom: "A.P1/L4 - Lab 7",
@@ -468,7 +468,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 },
                 {
-                    subject: "Pemikiran Komputasional TEORI",
+                    subject: "Pemikiran Komputasional (Teori)",
                     day: [4],
                     type: "REGULAR",
                     classroom: "B.T3/L2",
@@ -482,7 +482,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
                 },
                 {
-                    subject: "Pemikiran Komputasional PRAKTEK",
+                    subject: "Pemikiran Komputasional (Praktek)",
                     day: [4],
                     type: "REGULAR",
                     classroom: "A.P2/L2 - Lab 2",
@@ -572,17 +572,17 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     date: "03-04-2024",
                     type: "NOSHOW",
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     date: "29-04-2024",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     date: "30-04-2024",
                     type: "REPLACEMENT",
                     classroom: "C.T6/L3",
@@ -593,7 +593,7 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     date: "02-05-2024",
                     type: "REPLACEMENT",
                     classroom: "A.P1/L4",
@@ -618,7 +618,7 @@ const DEFAULT_SCHEDULE = {
                     location: 1,
                 },
                 {
-                    subject: "Pemikiran Komputasional TEORI",
+                    subject: "Pemikiran Komputasional (Teori)",
                     examType: "UTS",
                     date: "07-05-2024",
                     type: "EXAM",
@@ -632,7 +632,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pemikiran Komputasional PRAKTEK",
+                    subject: "Pemikiran Komputasional (Praktek)",
                     examType: "UTS",
                     date: "07-05-2024",
                     type: "EXAM",
@@ -660,7 +660,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     examType: "UTS",
                     date: "08-05-2024",
                     type: "EXAM",
@@ -674,7 +674,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     examType: "UTS",
                     date: "08-05-2024",
                     type: "EXAM",
@@ -712,12 +712,12 @@ const DEFAULT_SCHEDULE = {
                     type: "NOSHOW",
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     date: "15-05-2024",
                     type: "NOSHOW",
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     date: "20-05-2024",
                     type: "NOSHOW",
                 },
@@ -747,7 +747,7 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     date: "29-06-2024",
                     type: "REPLACEMENT",
                     time: [
@@ -771,7 +771,7 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     date: "01-07-2024",
                     type: "REPLACEMENT",
                 },
@@ -788,17 +788,17 @@ const DEFAULT_SCHEDULE = {
                     classroom: "B.T4/L2",
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     date: "03-07-2024",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pemikiran Komputasional TEORI",
+                    subject: "Pemikiran Komputasional (Teori)",
                     date: "04-07-2024",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pemikiran Komputasional PRAKTEK",
+                    subject: "Pemikiran Komputasional (Praktek)",
                     date: "04-07-2024",
                     type: "REPLACEMENT",
                 },
@@ -844,7 +844,7 @@ const DEFAULT_SCHEDULE = {
                     location: 1,
                 },
                 {
-                    subject: "Pemikiran Komputasional TEORI",
+                    subject: "Pemikiran Komputasional (Teori)",
                     examType: "UAS",
                     date: "11-07-2024",
                     type: "EXAM",
@@ -858,7 +858,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pemikiran Komputasional PRAKTEK",
+                    subject: "Pemikiran Komputasional (Praktek)",
                     examType: "UAS",
                     date: "11-07-2024",
                     type: "EXAM",
@@ -886,7 +886,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Web Front-End TEORI",
+                    subject: "Pengembangan Web Front-End (Teori)",
                     examType: "UAS",
                     date: "12-07-2024",
                     type: "EXAM",
@@ -900,7 +900,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Web Front-End PRAKTEK",
+                    subject: "Pengembangan Web Front-End (Praktek)",
                     examType: "UAS",
                     date: "12-07-2024",
                     type: "EXAM",
@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "19-09-2024"
+            updated: "19-09-2024a"
         },
         schedules: {
             regularClasses: [
@@ -942,11 +942,11 @@ const DEFAULT_SCHEDULE = {
                  * @property {int[]} location Where the class is being held (0 = Unknown, 1 = Onsite, 2 = Online)
                  */
                 {
-                    subject: "Perancangan dan Pemrograman Berorientasi Objek TEORI",
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
                     day: [1],
                     type: "REGULAR",
                     classroom: "B.T3/L4",
-                    professor: "Khristian Tanselmus, S.Kom., M.TI.",
+                    lecturer: "Khristian Tanselmus, S.Kom., M.TI.",
                     time: [
                         {
                             start: "17:45",
@@ -962,11 +962,11 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 1, 1],
                 },
                 {
-                    subject: "Pengembangan Web Back-End TEORI",
+                    subject: "Pengembangan Web Back-End (Teori)",
                     day: [2],
                     type: "REGULAR",
                     classroom: "B.T3/L4",
-                    professor: "Arwin Halim, S.Kom., M.Kom.",
+                    lecturer: "Arwin Halim, S.Kom., M.Kom.",
                     time: [
                         {
                             start: "17:45",
@@ -982,11 +982,11 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
-                    subject: "Perancangan dan Pemrograman Berorientasi Objek PRAKTEK",
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     day: [3],
                     type: "REGULAR",
                     classroom: "A.P1/L2",
-                    professor: "Khristian Tanselmus, S.Kom., M.TI.",
+                    lecturer: "Khristian Tanselmus, S.Kom., M.TI.",
                     time: [
                         {
                             start: "19:20",
@@ -997,7 +997,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 },
                 {
-                    subject: "Pengembangan Web Back-End PRAKTEK",
+                    subject: "Pengembangan Web Back-End (Praktek)",
                     day: [3],
                     type: "REGULAR",
                     classroom: "A.P4/L4",
@@ -1027,7 +1027,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
                     subject: "Statistika Komputasi",
@@ -1046,7 +1046,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:45",
                         },
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
             ],
             events: [
@@ -1072,27 +1072,27 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Perancangan dan Pemrograman Berorientasi Objek TEORI",
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
                     date: "04-11-2024",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Perancangan dan Pemrograman Berorientasi Objek PRAKTEK",
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "06-11-2024",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pengembangan Web Back-End TEORI",
+                    subject: "Pengembangan Web Back-End (Teori)",
                     date: "14-01-2025",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pengembangan Web Back-End PRAKTEK",
+                    subject: "Pengembangan Web Back-End (Praktek)",
                     date: "15-01-2025",
                     type: "REPLACEMENT",
                 },
                 {
-                    subject: "Pengembangan Web Back-End PRAKTEK",
+                    subject: "Pengembangan Web Back-End (Praktek)",
                     date: "17-01-2025",
                     type: "REPLACEMENT",
                 },
