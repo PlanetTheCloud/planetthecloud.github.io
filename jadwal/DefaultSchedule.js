@@ -1082,6 +1082,25 @@ const DEFAULT_SCHEDULE = {
                     type: "REPLACEMENT",
                 },
                 {
+                    subject: "Rekayasa Data",
+                    date: "26-11-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Rekayasa Data",
+                    date: "27-11-2024",
+                    classroom: "Hall Gedung C",
+                    time: [
+                        {
+                            start: "14.00",
+                            end: "17.00",
+                            // TODO: Please make a note section later
+                            notes: "Ga harus izin kalau gabisa datang karena akan disediakan recording"
+                        }
+                    ],
+                    type: "REPLACEMENT",
+                },
+                {
                     subject: "Pengembangan Web Back-End (Teori)",
                     date: "14-01-2025",
                     type: "REPLACEMENT",
