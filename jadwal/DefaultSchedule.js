@@ -1089,6 +1089,7 @@ const DEFAULT_SCHEDULE = {
                         }
                     ],
                     type: "REPLACEMENT",
+                    location: 1,
                 },
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
