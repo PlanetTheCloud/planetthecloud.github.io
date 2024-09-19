@@ -1052,12 +1052,23 @@ const DEFAULT_SCHEDULE = {
             events: [
                 {
                     subject: "Istirahat",
-                    day: [1, 2, 3, 4, 5],
+                    day: [1, 2, 4, 5],
                     type: "BREAK",
                     time: [
                         {
-                            start: "19:05",
+                            start: "19:10",
                             end: "19:30"
+                        }
+                    ],
+                },
+                {
+                    subject: "Istirahat",
+                    day: [3],
+                    type: "BREAK",
+                    time: [
+                        {
+                            start: "19:10",
+                            end: "19:20"
                         }
                     ],
                 }
