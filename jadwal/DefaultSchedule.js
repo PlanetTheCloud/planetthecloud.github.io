@@ -1052,8 +1052,10 @@ const DEFAULT_SCHEDULE = {
             events: [
                 {
                     subject: "Istirahat",
+                    // TO DEPRECATE: Remove day 
                     day: [1, 2, 3, 4, 5],
                     type: "BREAK",  
+                    // TO DEPRECATE: Remote time
                     time: [
                         {
                             start: "19:10",

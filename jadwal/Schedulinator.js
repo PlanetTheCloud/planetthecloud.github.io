@@ -269,10 +269,25 @@ const Schedulinator = {
                     sortedClasses.push({ ...c });
                 }
             })
-
             toPush.classesToday.forEach(c => pushToSorted(c));
             if (toPush.showBreaks && sortedClasses.length > 1) {
-                eventsIndex["BREAK"].forEach(e => pushToSorted(e));
+                // Calculate the differrence between previous class' end and next class' start time
+                for (let i = 1; i < sortedClasses.length; i++) {
+                    let prev = sortedClasses[i - 1].time.end,
+                        next = sortedClasses[i].time.start,
+                        prevInt = Number(prev.replace(':', '')),
+                        nextInt = Number(next.replace(':', ''));
+
+                    if (prevInt >= nextInt) {
+                        // No need to add a break because there's no time for break
+                        continue;
+                    }
+
+                    eventsIndex["BREAK"].forEach(e => pushToSorted({...e, time: [{
+                        start: prev,
+                        end: next
+                    }]}));
+                }
             }
             
             sortedClasses.sort((a, b) => {
