@@ -184,7 +184,8 @@ const Schedulinator = {
                 let classesInDay = [],
                     noShowInDay = [];
                 const classesToday = [];
-                let flag_hasOverrides = false;
+                let flag_hasOverrides = false,
+                    flag_additionOverrides = false;
 
                 if (overrideIndex[stringDate]) {
                     // Specific overrides trumps over ranged overrides
@@ -195,6 +196,10 @@ const Schedulinator = {
                         } else {
                             classesInDay.push({ ...o.details });
                             flag_hasOverrides = true;
+                        }
+
+                        if (o.details.type === 'ADDITION') {
+                            flag_additionOverrides = true;
                         }
                     });
                 } else {
@@ -207,7 +212,7 @@ const Schedulinator = {
                     });
                 }
 
-                if (!flag_hasOverrides) {
+                if (!flag_hasOverrides || flag_additionOverrides) {
                     // const thisWeek = (startingDate.getWeek() - startingWeek + 52) % 52;
                     const thisDay = startingDate.getDay();
 
@@ -226,8 +231,8 @@ const Schedulinator = {
                         return;
                     }
 
-                    if (["REGULAR", "REPLACEMENT", "EXAM"].includes(details.type)) {
-                        if (["REPLACEMENT", "EXAM"].includes(details.type)) {
+                    if (["REGULAR", "REPLACEMENT", "ADDITION", "EXAM"].includes(details.type)) {
+                        if (["REPLACEMENT", "ADDITION", "EXAM"].includes(details.type)) {
                             details = { ...subjectIndex[details.subject], ...details };
                         }
 
@@ -270,25 +275,32 @@ const Schedulinator = {
                 }
             })
             toPush.classesToday.forEach(c => pushToSorted(c));
+
+            let breaksToPush = [];
             if (toPush.showBreaks && sortedClasses.length > 1) {
                 // Calculate the differrence between previous class' end and next class' start time
                 for (let i = 1; i < sortedClasses.length; i++) {
                     let prev = sortedClasses[i - 1].time.end,
                         next = sortedClasses[i].time.start,
-                        prevInt = Number(prev.replace(':', '')),
-                        nextInt = Number(next.replace(':', ''));
-
+                        prevInt = parseInt(prev.replace(':', '')),
+                        nextInt = parseInt(next.replace(':', ''));
+                        
                     if (prevInt >= nextInt) {
                         // No need to add a break because there's no time for break
                         continue;
                     }
-
-                    eventsIndex["BREAK"].forEach(e => pushToSorted({...e, time: [{
-                        start: prev,
-                        end: next
-                    }]}));
+                    if (stringDate == '27-09-2024') {
+                        debugger;
+                    }
+                    eventsIndex["BREAK"].forEach(e => {
+                        breaksToPush.push({...e, time: [{
+                            start: prev,
+                            end: next
+                        }]});
+                    });
                 }
             }
+            breaksToPush.forEach(e => pushToSorted(e));
             
             sortedClasses.sort((a, b) => {
                 const timeA = a.time ? Number(a.time.start.replace(":", "")) : null;

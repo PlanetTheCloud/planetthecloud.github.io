@@ -165,7 +165,7 @@ const SchedulinatorViewer = {
 
         let meetingTypeIndicator = '';
         let classroomAndTimeIndicator = '';
-        if (["REGULAR", "REPLACEMENT", "EXAM"].includes(details.type)) {
+        if (["REGULAR", "REPLACEMENT", "ADDITION", "EXAM"].includes(details.type)) {
             meetingTypeIndicator = `<li class="list-group-item bg-${details.location.color}"><b class="text-white">${details.location.text} (PERT. ${details.meetingCount})</b></li>`;
             classroomIndicator = (["LANGSUNG"].includes(details.location.text)) ? `<div class="col-6 border-end align-self-center">
                 <b>${details.classroom ?? "Lihat Kartu Ujian"}</b>
@@ -187,7 +187,7 @@ const SchedulinatorViewer = {
 
         let timer = null;
         let timerIndicator = '';
-        if (["REGULAR", "REPLACEMENT", "EXAM"].includes(details.type)) {
+        if (["REGULAR", "REPLACEMENT", "ADDITION", "EXAM"].includes(details.type)) {
             timer = {
                 id: SchedulinatorViewer.timer.randomId(),
                 stop: this.timer.getDateTimeRepresentation(details.date, details.time.start),

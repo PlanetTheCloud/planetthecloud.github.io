@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "19-09-2024e"
+            updated: "27-09-2024"
         },
         schedules: {
             regularClasses: [
@@ -959,7 +959,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 1, 1],
+                    location: [1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1],
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
@@ -979,7 +979,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 1, 1],
                 },
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
@@ -1046,7 +1046,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:45",
                         },
                     ],
-                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
             ],
             events: [
@@ -1084,13 +1084,13 @@ const DEFAULT_SCHEDULE = {
                     classroom: "Hall Gedung C",
                     time: [
                         {
-                            start: "14.00",
-                            end: "17.00",
+                            start: "13:30",
+                            end: "17:05",
                             // TODO: Please make a note section later
                             notes: "Ga harus izin kalau gabisa datang karena akan disediakan recording"
                         }
                     ],
-                    type: "REPLACEMENT",
+                    type: "ADDITION",
                     location: 1,
                 },
                 {
