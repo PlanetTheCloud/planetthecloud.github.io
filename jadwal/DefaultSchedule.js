@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "03-10-2024"
+            updated: "10-10-2024d"
         },
         schedules: {
             regularClasses: [
@@ -1095,12 +1095,50 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
+                    date: "07-10-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Teori)",
+                    date: "08-10-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    date: "09-10-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Praktek)",
+                    date: "09-10-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    date: "11-10-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Minggu Persiapan UTS",
+                    date: {
+                        start: "04-11-2024",
+                        end: "09-11-2024"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
                     date: "04-11-2024",
                     type: "REPLACEMENT",
                 },
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "06-11-2024",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    date: "07-11-2024",
                     type: "REPLACEMENT",
                 },
                 {
