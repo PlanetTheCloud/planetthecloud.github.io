@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "10-10-2024d"
+            updated: "17-10-2024"
         },
         schedules: {
             regularClasses: [
@@ -1129,6 +1129,16 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
                     date: "04-11-2024",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Teori)",
+                    date: "05-11-2024",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Praktek)",
+                    date: "06-11-2024",
                     type: "REPLACEMENT",
                 },
                 {
