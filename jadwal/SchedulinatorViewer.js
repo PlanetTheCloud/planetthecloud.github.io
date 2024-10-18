@@ -101,7 +101,7 @@ const SchedulinatorViewer = {
         }
 
         let date = (details === null) ? '¯\\_(ツ)_/¯' : this.parseToReadableDate(details.date);
-        where.innerHTML += `<div class="col-md-12 col-lg-12 mb-3">
+        where.innerHTML += `<div class="col-md-12 col-lg-12 mb-4">
             <div class="card">
                 <div class="card-header text-center bg-warning">
                     <p class="mb-0"><b>${date}</b></p>
@@ -389,6 +389,8 @@ const SchedulinatorViewer = {
 
         // Render schedule
         this.runSpecificDate(new Date);
+
+        // Render schedulets
 
         // Show
         this.navigation.to('today');
