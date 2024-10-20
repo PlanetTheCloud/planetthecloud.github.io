@@ -289,9 +289,6 @@ const Schedulinator = {
                         // No need to add a break because there's no time for break
                         continue;
                     }
-                    if (stringDate == '27-09-2024') {
-                        debugger;
-                    }
                     eventsIndex["BREAK"].forEach(e => {
                         breaksToPush.push({...e, time: [{
                             start: prev,
@@ -352,23 +349,23 @@ const Schedulinator = {
     getTodaysSchedule() {
         return this.getScheduleByDate(this.dateToString(new Date));
     },
-    findScheduleAfter(date, maxDays = 21) {
-        date = this.stringToDate(date);
-        date.setDate(date.getDate() + 1);
+    findScheduleAfter(stringDate, maxDays = 21) {
+        stringDate = this.stringToDate(stringDate);
+        stringDate.setDate(stringDate.getDate() + 1);
         let tries = 0;
 
         while (tries < maxDays) {
-            let upcoming = this.getScheduleByDate(this.dateToString(date));
+            let upcoming = this.getScheduleByDate(this.dateToString(stringDate));
             if (upcoming) {
                 if (upcoming[0].type !== 'HOLIDAY') {
                     // Return only non-holiday
                     return {
-                        date: date,
+                        date: stringDate,
                         schedule: upcoming,
                     };
                 }
             }
-            date.setDate(date.getDate() + 1);
+            stringDate.setDate(stringDate.getDate() + 1);
             tries++;
         };
         return null;
