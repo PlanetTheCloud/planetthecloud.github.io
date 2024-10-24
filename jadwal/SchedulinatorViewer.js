@@ -5,7 +5,8 @@ const SchedulinatorViewer = {
         scheduleAll: document.getElementById('scheduleAll'),
         today: document.getElementById('todayClasses'),
         upcoming: document.getElementById('upcomingClasses'),
-        metadata: document.getElementById('classMetadata')
+        metadata: document.getElementById('classMetadata'),
+        weeklyLocations: document.getElementById('weeklyLocations')
     },
     navigation: {
         pagesElement: {
@@ -75,6 +76,13 @@ const SchedulinatorViewer = {
         let day = days[date.getDay()];
         let month = months[date.getMonth()];
         return `${day}, ${date.getDate()} ${month} ${date.getFullYear()}`;
+    },
+    parseToShorterReadableDate(date) {
+        let months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"];
+        let days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        let day = days[date.getDay()];
+        let month = months[date.getMonth()];
+        return `${day}, ${date.getDate()} ${month}`;
     },
     renderDayCard(where, details) {
         let classesHtml = '';
@@ -262,6 +270,47 @@ const SchedulinatorViewer = {
         this.elements.upcoming.innerHTML = '';
         this.renderDayCard(this.elements.upcoming, Schedulinator.findScheduleAfter(date));
     },
+    getWeeklyMeetingLocations(date) {
+        let lastDate = Schedulinator.dateToString(date);
+        let schedules = [];
+        schedules.push({
+            // Today's schedule
+            date: date,
+            schedule: Schedulinator.getScheduleByDate(Schedulinator.dateToString(date)),
+        });
+
+        for (let i = 1; i < 7; i++) {
+            let nextSchedule = Schedulinator.findScheduleAfter(lastDate);
+            if (nextSchedule !== null) {
+                schedules.push(nextSchedule);
+                lastDate = Schedulinator.dateToString(nextSchedule.date);
+            } else {
+                break;
+            }
+        }
+
+        schedules = schedules.map((data) => {
+            let location = 2; // 2 is for Maya, so it should be pulled down when we have Langsung/Unset
+            data.schedule.forEach((classData) => {
+                if (["REGULAR", "REPLACEMENT", "ADDITION", "EXAM"].includes(classData.type)) {
+                    location = (classData.location.code < location) ? classData.location.code : location;
+                }
+            });
+            return {
+                location: Schedulinator.translateLocationId(location),
+                dateDisplay: this.parseToShorterReadableDate(data.date)
+            };
+        });
+        return schedules;
+    },
+    runMeetingLocations(date) {
+        if (!this.metadata) {
+            return false;
+        }
+
+        this.elements.weeklyLocations.innerHTML = '';
+        console.log(this.getWeeklyMeetingLocations(date));
+    },
     handleScheduleCode(form) {
         if (typeof DEFAULT_SCHEDULE === "undefined") {
             form.code.classList.add('is-invalid');
@@ -391,6 +440,7 @@ const SchedulinatorViewer = {
         this.runSpecificDate(new Date);
 
         // Render schedulets
+        this.runMeetingLocations(new Date);
 
         // Show
         this.navigation.to('today');

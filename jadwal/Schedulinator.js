@@ -113,15 +113,18 @@ const Schedulinator = {
         return {
             1: {
                 text: "LANGSUNG",
-                color: "success"
+                color: "success",
+                code: 1
             },
             2: {
                 text: "MAYA",
-                color: "primary"
+                color: "primary",
+                code: 2
             }
         }[location] ?? {
             text: "LOKASI TIDAK DITENTUKAN",
-            color: "danger"
+            color: "danger",
+            code: 0
         };
     },
     build() {
