@@ -440,7 +440,7 @@ const SchedulinatorViewer = {
         this.runSpecificDate(new Date);
 
         // Render schedulets
-        this.runMeetingLocations(new Date);
+        // this.runMeetingLocations(new Date);
 
         // Show
         this.navigation.to('today');
