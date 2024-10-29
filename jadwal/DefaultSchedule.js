@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "30-10-2024b"
+            updated: "30-10-2024d"
         },
         schedules: {
             regularClasses: [
@@ -1192,6 +1192,14 @@ const DEFAULT_SCHEDULE = {
                     ],
                 },
                 {
+                    subject: "Minggu Ujian UTS",
+                    date: {
+                        start: "11-11-2024",
+                        end: "15-11-2024"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
                     subject: "Pengembangan Web Back-End (Teori)",
                     examType: "UTS",
                     date: "12-11-2024",
@@ -1225,7 +1233,13 @@ const DEFAULT_SCHEDULE = {
                     date: "13-11-2024",
                     type: "EXAM",
                     classroom: "B.T3/L4, T5/L4",
-                    time: [],
+                    time: [
+                        {
+                            // UNKNOWN
+                            start: "00:00",
+                            end: "00:00"
+                        }
+                    ],
                     location: 1,
                 },
                 {
@@ -1262,7 +1276,13 @@ const DEFAULT_SCHEDULE = {
                     date: "15-11-2024",
                     type: "EXAM",
                     classroom: null,
-                    time: [],
+                    time: [
+                        {
+                            // UNKNOWN
+                            start: "00:00",
+                            end: "00:00"
+                        }
+                    ],
                     location: 2,
                 },
                 {
