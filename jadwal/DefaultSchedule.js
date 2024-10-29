@@ -1157,6 +1157,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
                     date: "04-11-2024",
                     type: "REPLACEMENT",
+                    location: "B.T4/L2",
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
@@ -1172,6 +1173,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "06-11-2024",
                     type: "REPLACEMENT",
+                    location: "A.P1/L2",
                 },
                 {
                     subject: "Statistika Komputasi",
@@ -1188,6 +1190,80 @@ const DEFAULT_SCHEDULE = {
                             end: "19:00",
                         }
                     ],
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Teori)",
+                    examType: "UTS",
+                    date: "12-11-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "13:00",
+                            end: "14:40"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Praktek)",
+                    examType: "UTS",
+                    date: "12-11-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "13:00",
+                            end: "14:40"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    examType: "UTS",
+                    date: "13-11-2024",
+                    type: "EXAM",
+                    classroom: "B.T3/L4, T5/L4",
+                    time: [],
+                    location: 1,
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
+                    examType: "UTS",
+                    date: "14-11-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "13:00",
+                            end: "14:40"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    examType: "UTS",
+                    date: "14-11-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "13:00",
+                            end: "14:40"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Rekayasa Data",
+                    examType: "UTS",
+                    date: "15-11-2024",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [],
+                    location: 2,
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
