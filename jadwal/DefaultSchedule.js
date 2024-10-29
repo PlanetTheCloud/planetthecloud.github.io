@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "17-10-2024"
+            updated: "29-10-2024d"
         },
         schedules: {
             regularClasses: [
@@ -1074,6 +1074,11 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    date: "18-09-2024",
+                    type: "NOSHOW",
+                },
+                {
                     subject: "Rekayasa Data",
                     date: "26-09-2024",
                     type: "NOSHOW",
@@ -1086,7 +1091,6 @@ const DEFAULT_SCHEDULE = {
                         {
                             start: "13:30",
                             end: "17:05",
-                            // TODO: Please make a note section later
                             notes: "Ga harus izin kalau gabisa datang karena akan disediakan recording"
                         }
                     ],
@@ -1117,6 +1121,29 @@ const DEFAULT_SCHEDULE = {
                     subject: "Statistika Komputasi",
                     date: "11-10-2024",
                     type: "NOSHOW",
+                },
+                {
+                    subject: "Rekayasa Data",
+                    date: "31-10-2024",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
+                    date: "31-10-2024",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Rekayasa Data",
+                    date: "01-11-2024",
+                    time: [
+                        {
+                            start: "14:00",
+                            end: "17:00",
+                            notes: "Kuliah dari praktisi industri secara daring melalui Microsoft Teams"
+                        }
+                    ],
+                    type: "ADDITION",
+                    location: 2,
                 },
                 {
                     subject: "Minggu Persiapan UTS",
@@ -1150,6 +1177,17 @@ const DEFAULT_SCHEDULE = {
                     subject: "Statistika Komputasi",
                     date: "07-11-2024",
                     type: "REPLACEMENT",
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    date: "08-11-2024",
+                    type: "REPLACEMENT",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:00",
+                        }
+                    ],
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
