@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "30-10-2024a"
+            updated: "30-10-2024b"
         },
         schedules: {
             regularClasses: [
@@ -1157,7 +1157,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
                     date: "04-11-2024",
                     type: "REPLACEMENT",
-                    location: "B.T4/L2",
+                    classroom: "B.T4/L2",
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
@@ -1173,7 +1173,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "06-11-2024",
                     type: "REPLACEMENT",
-                    location: "A.P1/L2",
+                    classroom: "A.P1/L2",
                 },
                 {
                     subject: "Statistika Komputasi",
