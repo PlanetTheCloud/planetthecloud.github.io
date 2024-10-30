@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "30-10-2024d"
+            updated: "30-10-2024e"
         },
         schedules: {
             regularClasses: [
@@ -1133,6 +1133,11 @@ const DEFAULT_SCHEDULE = {
                     type: "REPLACEMENT",
                 },
                 {
+                    subject: "Statistika Komputasi",
+                    date: "01-11-2024",
+                    type: "NOSHOW",
+                },
+                {
                     subject: "Rekayasa Data",
                     date: "01-11-2024",
                     time: [
@@ -1190,6 +1195,11 @@ const DEFAULT_SCHEDULE = {
                             end: "19:00",
                         }
                     ],
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    date: "09-11-2024",
+                    type: "REPLACEMENT",
                 },
                 {
                     subject: "Minggu Ujian UTS",
