@@ -250,6 +250,22 @@ const SchedulinatorViewer = {
             timer: timer
         }
     },
+    renderWeeklyMeetingLocationsCard(where, details) {
+        let toRender = '';
+        details.forEach(detail => {
+            toRender += `<li class="list-group-item" style="padding: 0.10rem 1rem">
+                <div class="row">
+                    <div class="col-6 border-end align-self-center">
+                        <b>${detail.dateDisplay}</b>
+                    </div>
+                    <div class="col-6 border-start align-self-center text-white bg-${detail.location.color} p-1">
+                        <b>${detail.location.text}</b>
+                    </div>
+                </div>
+            </li>`;
+        });
+        where.innerHTML = toRender;
+    },
     renderMetadata(data) {
         this.metadata = data;
         return `<h1 class="mb-0 font-x-large">${data.major}</h1>
@@ -303,13 +319,16 @@ const SchedulinatorViewer = {
         });
         return schedules;
     },
-    runMeetingLocations(date) {
+    runWeeklyMeetingLocations(date) {
         if (!this.metadata) {
             return false;
         }
 
         this.elements.weeklyLocations.innerHTML = '';
-        console.log(this.getWeeklyMeetingLocations(date));
+        this.renderWeeklyMeetingLocationsCard(
+            this.elements.weeklyLocations,
+            this.getWeeklyMeetingLocations(date)
+        );
     },
     handleScheduleCode(form) {
         if (typeof DEFAULT_SCHEDULE === "undefined") {
@@ -440,7 +459,7 @@ const SchedulinatorViewer = {
         this.runSpecificDate(new Date);
 
         // Render schedulets
-        // this.runWeeklyMeetingLocations(new Date);
+        this.runWeeklyMeetingLocations(new Date);
 
         // Show
         this.navigation.to('today');
