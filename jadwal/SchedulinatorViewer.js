@@ -299,7 +299,8 @@ const SchedulinatorViewer = {
             });
         }
 
-        for (let i = 1; i < (7 - schedules.length); i++) {
+        const scheduleSize = schedules.length;
+        for (let i = 1; i <= (7 - scheduleSize); i++) {
             let nextSchedule = Schedulinator.findScheduleAfter(lastDate);
             if (nextSchedule !== null) {
                 schedules.push(nextSchedule);
