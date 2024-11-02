@@ -289,13 +289,17 @@ const SchedulinatorViewer = {
     getWeeklyMeetingLocations(date) {
         let lastDate = Schedulinator.dateToString(date);
         let schedules = [];
-        schedules.push({
-            // Today's schedule
-            date: date,
-            schedule: Schedulinator.getScheduleByDate(Schedulinator.dateToString(date)),
-        });
 
-        for (let i = 1; i < 7; i++) {
+        let todaySchedule = Schedulinator.getScheduleByDate(Schedulinator.dateToString(date));
+        if (typeof todaySchedule !== 'undefined') {
+            schedules.push({
+                // Today's schedule
+                date: date,
+                schedule: Schedulinator.getScheduleByDate(Schedulinator.dateToString(date)),
+            });
+        }
+
+        for (let i = 1; i < (7 - schedules.length); i++) {
             let nextSchedule = Schedulinator.findScheduleAfter(lastDate);
             if (nextSchedule !== null) {
                 schedules.push(nextSchedule);
