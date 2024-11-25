@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "21-11-2024"
+            updated: "25-11-2024"
         },
         schedules: {
             regularClasses: [
@@ -1294,6 +1294,11 @@ const DEFAULT_SCHEDULE = {
                         }
                     ],
                     location: 2,
+                },
+                {
+                    subject: "Pilkada 2024",
+                    date: "27-11-2024",
+                    type: "HOLIDAY"
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
