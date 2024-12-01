@@ -1,0 +1,1838 @@
+[
+    {
+        "link": "https://ak.gamepress.gg/operator/haze",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gitano",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/jessica",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/meteor",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/shirayuki",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/courier",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/scavenger",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/vigna",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/dobermann",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/matoimaru",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/frostleaf",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/estelle",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mousse",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gravel",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/rope",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/myrrh",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gavial",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/perfumer",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/matterhorn",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/cuora",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gummy",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/deepcolor",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/earthspirit",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/shaw",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ptilopsis",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/zima",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/texas",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/franka",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/indra",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lappland",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/specter",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/blue-poison",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/platinum",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/meteorite",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/amiya",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/skyfire",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mayer",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/silence",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/warfarin",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/nearl",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/projekt-red",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/liskarm",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/croissant",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/vulcan",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/provence",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/firewatch",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/cliffheart",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/pramanix",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/istina",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/sora",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/manticore",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/feater",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/exusiai",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/siege",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ifrit",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/eyjafjalla",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/angelina",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/shining",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/nightingale",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/hoshiguma",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/saria",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/silverash",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/savage",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/beehunter",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/nightmare",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/grani",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/skadi",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/glaucus",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/sussurro",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/chen",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/swire",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/greyy",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/schwarz",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/myrtle",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/astesia",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/hellagur",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/vermeil",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/executor",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/magallan",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/dur-nar",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ethan",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/breeze",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/flamebringer",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ceylon",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/may",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/waai-fu",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bison",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mostima",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/reed",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/broca",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ambriel",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/greythroat",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/blaze",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/snowsant",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/hung",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/aak",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/nian",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/leizi",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ceobe",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/purestream",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/utage",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bibeak",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/sesa",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bagpipe",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/conviction",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/cutter",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/sideroca",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/shamare",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/phantom",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/elysium",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/w",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/weedy",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/asbestos",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/tsukinogi",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/podenco",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/absinthe",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/leonhardt",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/rosa-poca",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/click",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/folinic",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ayerscarpe",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/suzuran",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/scene",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/beeswax",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/chiave",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/jaye",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/andreana",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/thorns",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/aciddrop",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/tomimi",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/flint",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/eunectes",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/arene",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mint",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/april",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/surtr",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bubble",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/whislash",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/aosta",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/blemishine",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/rosmontis",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mudrock",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/whisperain",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/amiya-guard",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/jackie",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/pinecone",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kafka",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/robin",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mountain",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/beanstalk",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/iris",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/archetto",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/tuye",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lava-purgatory",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mr-nothing",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/saga",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/dusk",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/tachanka",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/blitz",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/frost",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ash",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/m4-sopmod-ii-april-fools",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/m1887-april-fools",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/m4a1-april-fools",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/vector-april-fools",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/heavyrain",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/toddifons",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/passenger",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/akafuyu",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gladiia",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kaltsit",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/skadi-corrupting-heart",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/indigo",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bena",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kirara",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/carnelian",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/pallas",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/chen-holungday",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mizuki",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/la-pluma",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/tequila",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/roberta",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mulberry",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/saileach",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ashlock",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/fartooth",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/nearl-radiant-knight",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/flametail",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/corroserum",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/wild-mane",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/pudding",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/honeyberry",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/nine-colored-deer",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kjera",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/aurora",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gnosis",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/shalem",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ling",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lee",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/blacknight",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kroos-keen-glint",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/goldenglow",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/quercus",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/enforcer",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/fiammetta",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kazemaru",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/heidi",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/chestnut",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/rockrock",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/horn",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/specter-unchained",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/irene",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lumen",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/windflit",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/erato",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/czerny",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/hibiscus-purifier",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ebenholz",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/astgenne",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/greyy-lightningbearer",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/dorothy",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/gavial-invincible",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/pozemka",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/minimalist",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/cantabile",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/proviso",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/mlynar",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/highmore",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/luo-xiaohei",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/dagda",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/totter",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/paprika",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/stainless",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/texas-omertosa",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/penance",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/vigil",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lunacub",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/qanipalaat",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/quartz",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/puzzle",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/harmonie",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/reed-flame-shadow",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lin",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/chongyue",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/jieyun",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/firewhistle",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/wind-chimes",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/qiubai",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/rathalos-s-noir-corne",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kirin-r-yato",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/morgan",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/humus",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/cement",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ines",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/silence-paradigmatic",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/melanite",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/hoolheyak",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/muelsyse",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/insider",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/spuria",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/executor-ex-foedere",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/santalla",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/typhon",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/valarqvin",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/eyjafjalla-hvit-aska",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/swire-elegant-wit",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/poncirus",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bryophyta",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/coldshot",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/almond",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/jessica-liberated",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/delphine",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/verdant",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/vendela",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/hoederer",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/virtuosa",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/viviana",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lessing",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/bassline",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/caper",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/diamante",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/harold",
+        "class": "Medic",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_medic.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/leto",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/degenbrecher",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/warmy",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ray",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/kestrel",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/shu",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/zuo-le",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/wanqing",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/grain-buds",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/fuze",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/iana",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/doc",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ela",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/odda",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lutonada",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 4
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/aroma",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ascalon",
+        "class": "Specialist",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_specialist.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/wisadel",
+        "class": "Sniper",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_sniper.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/logos",
+        "class": "Caster",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_caster.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/civilight-eterna",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 6
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/fang-fire-sharpened",
+        "class": "Vanguard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_vanguard.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/underflow",
+        "class": "Defender",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_tank.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/lucilla",
+        "class": "Supporter",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_support.png",
+        "rarity": 5
+    },
+    {
+        "link": "https://ak.gamepress.gg/operator/ulpianus",
+        "class": "Guard",
+        "class_image": "https://ak.gamepress.gg/sites/default/files/2019-10/class_guard.png",
+        "rarity": 6
+    }
+]
