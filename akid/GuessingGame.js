@@ -42,7 +42,7 @@ const GuessingGame = {
         }
     },
     stats: {
-        guess_made: 0,
+        guesses_made: 0,
         games_played: 0,
         games_won: 0,
         games_lost: 0,
@@ -184,7 +184,7 @@ const GuessingGame = {
                     GuessingGame.memory.current_game.score.incorrect++;
                     GuessingGame.stats.incorrect_guess++;
                 }
-                GuessingGame.stats.guess_made++;
+                GuessingGame.stats.guesses_made++;
 
                 GAME.render_options(answer, true);
                 GuessingGame.game.display_score();
@@ -310,7 +310,7 @@ const GuessingGame = {
                     toRender += `<div class="card mb-4 border border-3 ${extraClasses}" onclick="GuessingGame.game.answer.select(${option})">
                             <div class="card-body text-white">
                                 <div class="row d-flex justify-content-center">
-                                    ${`<img src="assets/game/star_option.png" class="img-fluid star-option">`.repeat(option)}
+                                    ${`<img class="img-fluid star-option">`.repeat(option)}
                                     (${option})
                                 </div>
                             </div>
@@ -318,6 +318,9 @@ const GuessingGame = {
                 });
 
                 GuessingGame.display.render_options(toRender);
+                [...document.getElementsByClassName('star-option')].forEach(e => {
+                    e.src = 'assets/game/star_option.png';
+                });
             },
             check_answer(answer) {
                 return String(this.get_correct_answer()) === String(answer);
