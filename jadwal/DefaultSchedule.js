@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "02-12-2024"
+            updated: "05-12-2024"
         },
         schedules: {
             regularClasses: [
@@ -1309,6 +1309,11 @@ const DEFAULT_SCHEDULE = {
                     subject: "Rekayasa Data",
                     date: "28-11-2024",
                     type: "NOSHOW"
+                },
+                {
+                    subject: "Rekayasa Data",
+                    date: "29-11-2024",
+                    type: "REPLACEMENT"
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
