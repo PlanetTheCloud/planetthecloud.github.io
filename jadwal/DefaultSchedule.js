@@ -1316,6 +1316,18 @@ const DEFAULT_SCHEDULE = {
                     type: "ADDITION"
                 },
                 {
+                    subject: "Rekayasa Data",
+                    date: "13-12-2024",
+                    type: "ADDITION",
+                    location: 2,
+                    classroom: "PRAKTISI"
+                },
+                {
+                    subject: "Rekayasa Data",
+                    date: "26-12-2024",
+                    type: "NOSHOW",
+                },
+                {
                     subject: "Pengembangan Web Back-End (Teori)",
                     date: "14-01-2025",
                     type: "REPLACEMENT",
