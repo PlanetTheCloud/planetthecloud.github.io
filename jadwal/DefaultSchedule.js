@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "05-12-2024a"
+            updated: "17-12-2024a"
         },
         schedules: {
             regularClasses: [
@@ -1326,6 +1326,14 @@ const DEFAULT_SCHEDULE = {
                     subject: "Rekayasa Data",
                     date: "26-12-2024",
                     type: "NOSHOW",
+                },
+                {
+                    subject: "Libur Natal dan Tahun Baru",
+                    date: {
+                        start: "23-12-2024",
+                        end: "06-01-2025"
+                    },
+                    type: "HOLIDAY"
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
