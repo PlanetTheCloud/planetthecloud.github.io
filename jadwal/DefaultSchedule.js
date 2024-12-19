@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "19-12-2024b"
+            updated: "19-12-2024c"
         },
         schedules: {
             regularClasses: [
@@ -1354,6 +1354,11 @@ const DEFAULT_SCHEDULE = {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "15-01-2025",
                     type: "REPLACEMENT",
+                },
+                {
+                    subject: "Rekayasa Data",
+                    date: "16-01-2025",
+                    type: "NOSHOW",
                 },
                 {
                     subject: "Pengembangan Web Back-End (Praktek)",
