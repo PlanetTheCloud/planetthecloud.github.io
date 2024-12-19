@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "17-12-2024a"
+            updated: "19-12-2024b"
         },
         schedules: {
             regularClasses: [
@@ -1330,10 +1330,15 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Libur Natal dan Tahun Baru",
                     date: {
-                        start: "23-12-2024",
-                        end: "06-01-2025"
+                        start: "24-12-2024",
+                        end: "02-01-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
+                    date: "13-01-2025",
+                    type: "REPLACEMENT",
                 },
                 {
                     subject: "Pengembangan Web Back-End (Teori)",
@@ -1346,7 +1351,17 @@ const DEFAULT_SCHEDULE = {
                     type: "REPLACEMENT",
                 },
                 {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    date: "15-01-2025",
+                    type: "REPLACEMENT",
+                },
+                {
                     subject: "Pengembangan Web Back-End (Praktek)",
+                    date: "17-01-2025",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "17-01-2025",
                     type: "REPLACEMENT",
                 },
