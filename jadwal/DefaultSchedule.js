@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "19-12-2024c"
+            updated: "02-01-2025"
         },
         schedules: {
             regularClasses: [
@@ -1334,6 +1334,11 @@ const DEFAULT_SCHEDULE = {
                         end: "02-01-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    date: "03-01-2025",
+                    type: "NOSHOW",
                 },
                 {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
