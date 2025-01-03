@@ -12,15 +12,11 @@ const SchedulinatorViewer = {
         pagesElement: {
             today: document.getElementById('page_today'),
             all: document.getElementById('page_all'),
-            editor: document.getElementById('page_editor')
         },
         afterNavigationCallback: {
             all: function() {
                 SchedulinatorViewer.handleShowAllData();
             },
-            editor: function() {
-                
-            }
         },
         to(page) {
             if (!Object.keys(this.pagesElement).includes(page)) {
