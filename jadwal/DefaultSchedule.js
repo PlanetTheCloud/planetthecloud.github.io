@@ -930,7 +930,7 @@ const DEFAULT_SCHEDULE = {
             end: "17-03-2025", // 17 Mar 2025
             semester: 3,
             academicYear: "2024/2025",
-            updated: "02-01-2025a"
+            updated: "10-01-2025d"
         },
         schedules: {
             regularClasses: [
@@ -1054,7 +1054,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Istirahat",
                     // TO DEPRECATE: Remove day 
                     day: [1, 2, 3, 4, 5],
-                    type: "BREAK",  
+                    type: "BREAK",
                     // TO DEPRECATE: Remote time
                     time: [
                         {
@@ -1369,6 +1369,106 @@ const DEFAULT_SCHEDULE = {
                     subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
                     date: "17-01-2025",
                     type: "REPLACEMENT",
+                },
+                {
+                    subject: "Persiapan Ujian UAS",
+                    date: {
+                        start: "13-01-2025",
+                        end: "17-01-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Minggu Ujian UAS",
+                    date: {
+                        start: "20-01-2025",
+                        end: "25-01-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Teori)",
+                    examType: "UAS",
+                    date: "21-01-2025",
+                    type: "EXAM",
+                    classroom: "A.P4/L4",
+                    time: [
+                        {
+                            start: "19:20",
+                            end: "21:00"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Web Back-End (Praktek)",
+                    examType: "UAS",
+                    date: "21-01-2025",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "19:20",
+                            end: "21:00"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Statistika Komputasi",
+                    examType: "UAS",
+                    date: "22-01-2025",
+                    type: "EXAM",
+                    classroom: "B.T5/L4",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Teori)",
+                    examType: "UAS",
+                    date: "23-01-2025",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Perancangan dan Pemrograman Berorientasi Objek (Praktek)",
+                    examType: "UAS",
+                    date: "23-01-2025",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Rekayasa Data",
+                    examType: "UTS",
+                    date: "24-01-2025",
+                    type: "EXAM",
+                    classroom: null,
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 2,
                 },
             ]
         }
