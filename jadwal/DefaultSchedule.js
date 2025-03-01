@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "02-03-2025a"
+            updated: "02-03-2025b"
         },
         schedules: {
             regularClasses: [
@@ -1513,7 +1513,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
@@ -1533,7 +1533,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
                     subject: "Pengembangan Perangkat Lunak Tangkas (Teori)",
@@ -1548,7 +1548,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "18:00",
                         },
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
@@ -1603,7 +1603,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:45",
                         },
                     ],
-                    location: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 },
             ],
             events: [
