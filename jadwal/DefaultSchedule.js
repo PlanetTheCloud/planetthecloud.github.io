@@ -1545,7 +1545,7 @@ const DEFAULT_SCHEDULE = {
                         {
                             start: "17:45",
                             end: "19:05",
-                            tolerance: "18:00",
+                            tolerance: "18:05",
                         },
                     ],
                     location: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
