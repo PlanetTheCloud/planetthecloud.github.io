@@ -1625,6 +1625,17 @@ const DEFAULT_SCHEDULE = {
                 /**
                  * Types: HOLIDAY, EXAM, REPLACEMENT (Kelas Pengganti)
                  */
+                // TODO: Note for Sistem Operasi (Teori), Meet number 6, 14, 15, 16 will be held in Labs.
+                {
+                    subject: "Libur Kenaikan Yesus Kristus",
+                    date: "29-05-2025",
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    date: "03-06-2025",
+                    type: "REPLACEMENT"
+                },
             ]
         }
     },
