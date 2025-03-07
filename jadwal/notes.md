@@ -1,0 +1,1 @@
+For Schedules there's commonality with the holiday schedule and exam schedule

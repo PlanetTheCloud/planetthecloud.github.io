@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "06-03-2025"
+            updated: "07-03-2025"
         },
         schedules: {
             regularClasses: [
@@ -1635,6 +1635,44 @@ const DEFAULT_SCHEDULE = {
                     subject: "Sistem Operasi (Teori)",
                     date: "03-06-2025",
                     type: "REPLACEMENT"
+                },
+                {
+                    subject: "Kecerdasan Artifisial (Teori)",
+                    date: "29-04-2025",
+                    type: "REPLACEMENT",
+                    classroom: "CEK MIKA"
+                },
+                {
+                    subject: "Persiapan Ujian UTS",
+                    date: {
+                        start: "28-04-2025",
+                        end: "02-05-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Minggu Ujian UTS",
+                    date: {
+                        start: "05-05-2025",
+                        end: "10-05-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Persiapan Ujian UAS",
+                    date: {
+                        start: "30-06-2025",
+                        end: "04-07-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Minggu Ujian UAS",
+                    date: {
+                        start: "07-07-2025",
+                        end: "12-07-2025"
+                    },
+                    type: "HOLIDAY"
                 },
             ]
         }
