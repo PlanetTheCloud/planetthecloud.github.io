@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "07-03-2025"
+            updated: "12-03-2025"
         },
         schedules: {
             regularClasses: [
@@ -1626,6 +1626,16 @@ const DEFAULT_SCHEDULE = {
                  * Types: HOLIDAY, EXAM, REPLACEMENT (Kelas Pengganti)
                  */
                 // TODO: Note for Sistem Operasi (Teori), Meet number 6, 14, 15, 16 will be held in Labs.
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
+                    date: "11-03-2025",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
+                    date: "12-03-2025",
+                    type: "NOSHOW",
+                },
                 {
                     subject: "Libur Kenaikan Yesus Kristus",
                     date: "29-05-2025",
