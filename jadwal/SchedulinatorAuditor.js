@@ -1,10 +1,9 @@
 const SchedulinatorAuditor = {
-    auditRawRegularClasses(rawSchedule) {
+    auditRawRegularClasses(schedule) {
         let findings = {
             CRITICAL: [],
             WARNING: []
         };
-
         
     }
 }
