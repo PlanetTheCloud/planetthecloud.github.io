@@ -1548,7 +1548,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "18:05",
                         },
                     ],
-                    location: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    location: [1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1],
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
