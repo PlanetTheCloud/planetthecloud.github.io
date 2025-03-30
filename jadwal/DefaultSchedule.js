@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "31-03-2025"
+            updated: "31-03-2025a"
         },
         schedules: {
             regularClasses: [
@@ -1650,7 +1650,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Libur Idul Fitri",
                     date: {
                         start: "31-03-2025",
-                        end: "08-04-2025"
+                        end: "07-04-2025"
                     },
                     type: "HOLIDAY"
                 },
