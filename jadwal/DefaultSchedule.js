@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "31-03-2025a"
+            updated: "08-04-2025a"
         },
         schedules: {
             regularClasses: [
@@ -1667,6 +1667,16 @@ const DEFAULT_SCHEDULE = {
                         end: "02-05-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
+                    date: "08-04-2025",
+                    type: "NOSHOW",
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
+                    date: "09-04-2025",
+                    type: "NOSHOW",
                 },
                 {
                     subject: "Minggu Ujian UTS",
