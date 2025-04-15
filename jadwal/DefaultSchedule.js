@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "08-04-2025a"
+            updated: "15-04-2025"
         },
         schedules: {
             regularClasses: [
@@ -1635,6 +1635,11 @@ const DEFAULT_SCHEDULE = {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
                     date: "12-03-2025",
                     type: "NOSHOW",
+                },
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    date: "10-04-2025",
+                    type: "NOSHOW"
                 },
                 {
                     subject: "Libur Kenaikan Yesus Kristus",
