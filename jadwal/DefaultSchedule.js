@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "15-04-2025"
+            updated: "17-04-2025"
         },
         schedules: {
             regularClasses: [
@@ -1656,6 +1656,14 @@ const DEFAULT_SCHEDULE = {
                     date: {
                         start: "31-03-2025",
                         end: "07-04-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Jumat Agung",
+                    date: {
+                        start: "18-04-2025",
+                        end: "19-04-2025"
                     },
                     type: "HOLIDAY"
                 },
