@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "17-04-2025"
+            updated: "17-04-2025f"
         },
         schedules: {
             regularClasses: [
@@ -1583,7 +1583,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 1, 1],
+                    location: [1, 1, 2, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1],
                 },
                 {
                     subject: "Kecerdasan Artifisial (Teori)",
@@ -1690,6 +1690,11 @@ const DEFAULT_SCHEDULE = {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
                     date: "09-04-2025",
                     type: "NOSHOW",
+                },
+                {
+                    subject: "Hari Buruh",
+                    date: "01-05-2025",
+                    type: "HOLIDAY"
                 },
                 {
                     subject: "Minggu Ujian UTS",
