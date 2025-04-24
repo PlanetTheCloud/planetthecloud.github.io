@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "17-04-2025f"
+            updated: "25-04-2025"
         },
         schedules: {
             regularClasses: [
@@ -1642,16 +1642,6 @@ const DEFAULT_SCHEDULE = {
                     type: "NOSHOW"
                 },
                 {
-                    subject: "Libur Kenaikan Yesus Kristus",
-                    date: "29-05-2025",
-                    type: "HOLIDAY"
-                },
-                {
-                    subject: "Sistem Operasi (Teori)",
-                    date: "03-06-2025",
-                    type: "REPLACEMENT"
-                },
-                {
                     subject: "Libur Idul Fitri",
                     date: {
                         start: "31-03-2025",
@@ -1668,6 +1658,11 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
+                    subject: "Libur Kenaikan Yesus Kristus",
+                    date: "29-05-2025",
+                    type: "HOLIDAY"
+                },
+                {
                     subject: "Kecerdasan Artifisial (Teori)",
                     date: "29-04-2025",
                     type: "REPLACEMENT",
@@ -1680,6 +1675,11 @@ const DEFAULT_SCHEDULE = {
                         end: "02-05-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    date: "26-04-2025",
+                    type: "REPLACEMENT"
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
@@ -1703,6 +1703,11 @@ const DEFAULT_SCHEDULE = {
                         end: "10-05-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    date: "03-06-2025",
+                    type: "REPLACEMENT"
                 },
                 {
                     subject: "Persiapan Ujian UAS",
