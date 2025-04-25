@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "25-04-2025f"
+            updated: "25-04-2025g"
         },
         schedules: {
             regularClasses: [
@@ -1658,11 +1658,6 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Libur Kenaikan Yesus Kristus",
-                    date: "29-05-2025",
-                    type: "HOLIDAY"
-                },
-                {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
                     date: "29-04-2025",
                     type: "REPLACEMENT",
@@ -1674,7 +1669,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Kecerdasan Artifisial (Teori)",
-                    date: "01-05-2025",
+                    date: "26-04-2025",
                     type: "REPLACEMENT",
                 },
                 {
@@ -1703,7 +1698,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Sistem Operasi (Teori)",
-                    date: "26-04-2025",
+                    date: "03-05-2025",
                     type: "REPLACEMENT"
                 },
                 {
