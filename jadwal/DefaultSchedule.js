@@ -1484,7 +1484,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "25-04-2025a"
+            updated: "25-04-2025f"
         },
         schedules: {
             regularClasses: [
@@ -1663,10 +1663,35 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Kecerdasan Artifisial (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
                     date: "29-04-2025",
                     type: "REPLACEMENT",
-                    classroom: "CEK MIKA"
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
+                    date: "30-04-2025",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Kecerdasan Artifisial (Teori)",
+                    date: "01-05-2025",
+                    type: "REPLACEMENT",
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
+                    date: "02-05-2025",
+                    type: "REPLACEMENT",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                        }
+                    ],
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
+                    date: "02-05-2025",
+                    type: "REPLACEMENT",
                 },
                 {
                     subject: "Persiapan Ujian UTS",
@@ -1679,6 +1704,11 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Sistem Operasi (Teori)",
                     date: "26-04-2025",
+                    type: "REPLACEMENT"
+                },
+                {
+                    subject: "Organisasi dan Arsitektur Komputer (Teori)",
+                    date: "28-04-2025",
                     type: "REPLACEMENT"
                 },
                 {
