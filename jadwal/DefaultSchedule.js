@@ -11,7 +11,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "25-04-2025g"
+            updated: "05-05-2025"
         },
         schedules: {
             regularClasses: [
@@ -255,6 +255,104 @@ const DEFAULT_SCHEDULE = {
                         end: "10-05-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Kecerdasan Artifisial (Teori)",
+                    examType: "UTS",
+                    date: "05-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Organisasi dan Arsitektur Komputer (Teori)",
+                    examType: "UTS",
+                    date: "06-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Perangkat Lunak Tangkas (Teori)",
+                    examType: "UTS",
+                    date: "07-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    examType: "UTS",
+                    date: "08-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Sistem Operasi (Praktek)",
+                    examType: "UTS",
+                    date: "08-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
+                    examType: "UTS",
+                    date: "08-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
+                    examType: "UTS",
+                    date: "08-05-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
                 },
                 {
                     subject: "Sistem Operasi (Teori)",
