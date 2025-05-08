@@ -11,7 +11,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "05-05-2025"
+            updated: "09-05-2025"
         },
         schedules: {
             regularClasses: [
@@ -329,7 +329,7 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
                     examType: "UTS",
-                    date: "08-05-2025",
+                    date: "09-05-2025",
                     type: "EXAM",
                     classroom: "CEK MIKA",
                     time: [
@@ -343,7 +343,7 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
                     examType: "UTS",
-                    date: "08-05-2025",
+                    date: "09-05-2025",
                     type: "EXAM",
                     classroom: "CEK MIKA",
                     time: [
