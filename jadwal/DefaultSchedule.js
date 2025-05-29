@@ -11,7 +11,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "26-05-2025a"
+            updated: "29-05-2025a"
         },
         schedules: {
             regularClasses: [
@@ -368,6 +368,11 @@ const DEFAULT_SCHEDULE = {
                     subject: "Organisasi dan Arsitektur Komputer (Teori)",
                     date: "19-05-2025",
                     type: "NOSHOW"
+                },
+                {
+                    subject: "Kenaikan Yesus Kristus",
+                    date: "29-05-2025",
+                    type: "HOLIDAY"
                 },
                 {
                     subject: "Sistem Operasi (Teori)",
