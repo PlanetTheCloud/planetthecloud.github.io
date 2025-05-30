@@ -11,7 +11,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "29-05-2025a"
+            updated: "29-05-2025b"
         },
         schedules: {
             regularClasses: [
@@ -130,7 +130,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:45",
                         },
                     ],
-                    location: [1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1],
+                    location: [1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 1],
                 },
             ],
             events: [
