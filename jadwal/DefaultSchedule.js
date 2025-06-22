@@ -11,7 +11,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "06-06-2025a"
+            updated: "23-06-2025a"
         },
         schedules: {
             regularClasses: [
@@ -40,7 +40,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+                    location: [1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1],
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
@@ -397,6 +397,7 @@ const DEFAULT_SCHEDULE = {
                     },
                     type: "HOLIDAY"
                 },
+
                 {
                     subject: "Minggu Ujian UAS",
                     date: {
@@ -404,6 +405,90 @@ const DEFAULT_SCHEDULE = {
                         end: "12-07-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Kecerdasan Artifisial (Teori)",
+                    examType: "UAS",
+                    date: "07-07-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Organisasi dan Arsitektur Komputer (Teori)",
+                    examType: "UAS",
+                    date: "08-07-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Perangkat Lunak Tangkas (Teori)",
+                    examType: "UAS",
+                    date: "09-07-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    examType: "UAS",
+                    date: "10-07-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "19:20",
+                            end: "21:00"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Teori)",
+                    examType: "UAS",
+                    date: "11-07-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Front-End (Praktek)",
+                    examType: "UAS",
+                    date: "11-07-2025",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
                 },
             ]
         }
