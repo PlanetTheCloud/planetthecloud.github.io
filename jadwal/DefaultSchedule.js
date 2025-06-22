@@ -385,11 +385,6 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Sistem Operasi (Teori)",
-                    date: "03-07-2025",
-                    type: "REPLACEMENT"
-                },
-                {
                     subject: "Persiapan Ujian UAS",
                     date: {
                         start: "30-06-2025",
@@ -397,7 +392,11 @@ const DEFAULT_SCHEDULE = {
                     },
                     type: "HOLIDAY"
                 },
-
+                {
+                    subject: "Sistem Operasi (Teori)",
+                    date: "03-07-2025",
+                    type: "REPLACEMENT"
+                },
                 {
                     subject: "Minggu Ujian UAS",
                     date: {
