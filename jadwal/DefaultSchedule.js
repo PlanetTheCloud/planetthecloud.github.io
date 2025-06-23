@@ -11,7 +11,7 @@ const DEFAULT_SCHEDULE = {
             end: "03-03-2026", // 3 Mar 2026
             semester: 4,
             academicYear: "2024/2025",
-            updated: "23-06-2025c"
+            updated: "23-06-2025e"
         },
         schedules: {
             regularClasses: [
@@ -385,12 +385,28 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
+                    subject: "Tahun Baru Islam 1447 Hijriyah",
+                    date: "27-06-2025",
+                    type: "HOLIDAY"
+                },
+                {
                     subject: "Persiapan Ujian UAS",
                     date: {
                         start: "30-06-2025",
                         end: "04-07-2025"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Organisasi dan Arsitektur Komputer (Teori)",
+                    date: "28-06-2025",
+                    type: "REPLACEMENT",
+                    time: [
+                        {
+                            start: "14:00",
+                            end: "16:50"
+                        }
+                    ],
                 },
                 {
                     subject: "Kecerdasan Artifisial (Teori)",
