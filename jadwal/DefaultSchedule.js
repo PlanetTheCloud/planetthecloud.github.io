@@ -533,4 +533,156 @@ const DEFAULT_SCHEDULE = {
             ]
         }
     },
+    "5-IFBSORE-2526": {
+        metadata: {
+            identifier: "5-IFBSORE-2526",
+            major: "S-1 / Teknik Informatika",
+            class: "IF-B-SORE",
+            start: "15-09-2025", // 15 Sep 2025
+            end: "15-09-2026", // 15 Sep 2026
+            semester: 5,
+            academicYear: "2025/2026",
+            updated: "15-09-2025a"
+        },
+        schedules: {
+            regularClasses: [
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    day: [1],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:40",
+                        }
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    day: [2],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:40",
+                        }
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Bahasa Indonesia (Teori)",
+                    day: [3],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05",
+                            tolerance: "18:05",
+                        },
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    day: [3],
+                    type: "REGULAR",
+                    classroom: "A.P1/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "19:20",
+                            end: "21:00",
+                            tolerance: "19:35",
+                        },
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Metodologi Penelitian (Teori)",
+                    day: [4],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05",
+                            tolerance: "18:00",
+                        },
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    day: [4],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:45",
+                        },
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+                {
+                    subject: "Startup Digital (Teori)",
+                    day: [5],
+                    type: "REGULAR",
+                    classroom: "B.T3/L4",
+                    lecturer: "",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                            tolerance: "18:00",
+                        },
+                        {
+                            start: "19:30",
+                            end: "20:50",
+                            tolerance: "19:40",
+                        }
+                    ],
+                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                },
+            ],
+            events: [
+                {
+                    subject: "Istirahat",
+                    day: [1, 2, 3, 4, 5],
+                    type: "BREAK",
+                    time: [
+                        {
+                            start: "19:10",
+                            end: "19:30"
+                        }
+                    ],
+                }
+            ],
+            overrides: [
+                // TODO: Fill overrides for holidays, exams, replacements as needed
+            ]
+        }
+    },
 }
