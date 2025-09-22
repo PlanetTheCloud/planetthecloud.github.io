@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Schedule Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        .day-checkboxes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .day-checkboxes label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        
+        .day-checkboxes input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        .time-slots {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .time-slot {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr auto;
+            gap: 10px;
+            align-items: end;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+        
+        .time-slot label {
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+        
+        .location-editor {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .meeting-slot {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: white;
+        }
+        
+        .meeting-slot label {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            margin-bottom: 3px;
+        }
+        
+        .meeting-slot select {
+            width: 100%;
+            padding: 2px;
+            font-size: 11px;
+            border: 1px solid #ddd;
+        }
+        
+        .location-legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        
+        .unknown { background-color: #f0f0f0; }
+        .onsite { background-color: #d4edda; }
+        .online { background-color: #cce7ff; }
+        
+        .class-item {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: white;
+            position: relative;
+        }
+        
+        .class-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .class-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .class-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .override-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+        }
+        
+        .override-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .btn-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        
+        .btn-small {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        .output {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        
+        .output h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        
+        .output pre {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .bulk-actions {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .bulk-actions button {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        
+        .date-range {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .date-range span {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+        
+        .collapsible.active {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .content {
+            padding: 0 18px;
+            display: block;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            margin-right: 2px;
+        }
+        
+        .tab.active {
+            background: white;
+            border-bottom: 1px solid white;
+            position: relative;
+            top: 1px;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            background: white;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Complete Schedule Editor</h1>
+        
+        <!-- Data Source Selection -->
+        <div class="section" style="margin-bottom: 30px;">
+            <h2>Data Source</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>
+                        <input type="radio" name="dataSource" value="create" checked onchange="toggleDataSource()"> Create New Schedule
+                    </label>
+                    <label>
+                        <input type="radio" name="dataSource" value="import" onchange="toggleDataSource()"> Load Existing Schedule
+                    </label>
+                </div>
+            </div>
+            
+            <div id="importSection" class="hidden">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dataSourceFile">Data Source:</label>
+                        <select id="dataSourceFile" onchange="loadDataSource()">
+                            <option value="">Select data source...</option>
+                            <option value="DefaultSchedule.js" selected>DefaultSchedule.js (Local)</option>
+                            <option value="custom">Custom File/URL</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="scheduleIdentifier">Schedule Identifier:</label>
+                        <select id="scheduleIdentifier" onchange="loadScheduleData()">
+                            <option value="">Select schedule...</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="customSourceSection" class="hidden">
+                    <div class="form-group">
+                        <label for="customSource">Custom Data Source:</label>
+                        <textarea id="customSource" rows="5" placeholder="Paste JavaScript object or JSON data here..."></textarea>
+                        <button type="button" class="btn-secondary btn-small" onclick="parseCustomData()">Parse Data</button>
+                    </div>
+                </div>
+                
+                <div id="currentScheduleInfo" class="hidden">
+                    <div class="alert alert-info">
+                        <strong>Loaded Schedule:</strong> <span id="loadedScheduleName"></span><br>
+                        <strong>Last Updated:</strong> <span id="loadedScheduleUpdated"></span><br>
+                        <strong>Classes:</strong> <span id="loadedClassCount"></span> | 
+                        <strong>Events:</strong> <span id="loadedEventCount"></span> | 
+                        <strong>Overrides:</strong> <span id="loadedOverrideCount"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('metadata')">Metadata</div>
+                <div class="tab" onclick="showTab('classes')">Regular Classes</div>
+                <div class="tab" onclick="showTab('events')">Events</div>
+                <div class="tab" onclick="showTab('overrides')">Overrides</div>
+                <div class="tab" onclick="showTab('output')">Generate Output</div>
+            </div>
+            
+            <!-- Metadata Tab -->
+            <div id="metadata-tab" class="tab-content active">
+                <h2>Schedule Metadata</h2>
+                <div class="section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="identifier">Identifier:</label>
+                            <input type="text" id="identifier" name="identifier" required 
+                                   placeholder="e.g., 4-IFBSORE-2425">
+                        </div>
+                        <div class="form-group">
+                            <label for="major">Major:</label>
+                            <input type="text" id="major" name="major" required 
+                                   placeholder="e.g., S-1 / Teknik Informatika">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="class">Class:</label>
+                            <input type="text" id="class" name="class" required 
+                                   placeholder="e.g., IF-B-SORE">
+                        </div>
+                        <div class="form-group">
+                            <label for="academicYear">Academic Year:</label>
+                            <input type="text" id="academicYear" name="academicYear" required 
+                                   placeholder="e.g., 2024/2025">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row-3">
+                        <div class="form-group">
+                            <label for="semester">Semester:</label>
+                            <input type="number" id="semester" name="semester" required min="1" max="8" 
+                                   placeholder="e.g., 4">
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Start Date:</label>
+                            <input type="date" id="startDate" name="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">End Date:</label>
+                            <input type="date" id="endDate" name="endDate" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Regular Classes Tab -->
+            <div id="classes-tab" class="tab-content">
+                <h2>Regular Classes</h2>
+                <div id="regularClasses">
+                    <!-- Classes will be added dynamically -->
+                </div>
+                <button type="button" class="btn-success" onclick="addClass()">Add New Class</button>
+            </div>
+            
+            <!-- Events Tab -->
+            <div id="events-tab" class="tab-content">
+                <h2>Events (Breaks, etc.)</h2>
+                <div id="eventsContainer">
+                    <!-- Events will be added dynamically -->
+                </div>
+                <button type="button" class="btn-success" onclick="addEvent()">Add New Event</button>
+            </div>
+            
+            <!-- Overrides Tab -->
+            <div id="overrides-tab" class="tab-content">
+                <h2>Schedule Overrides</h2>
+                <div id="overridesContainer">
+                    <!-- Overrides will be added dynamically -->
+                </div>
+                <button type="button" class="btn-success" onclick="addOverride()">Add New Override</button>
+            </div>
+            
+            <!-- Output Tab -->
+            <div id="output-tab" class="tab-content">
+                <h2>Generated Schedule</h2>
+                <div class="buttons">
+                    <button type="button" class="btn-primary" onclick="generateSchedule()">Generate Complete Schedule</button>
+                    <button type="button" class="btn-secondary" onclick="resetAll()">Reset All</button>
+                    <button type="button" class="btn-warning" onclick="loadExample()">Load Example Data</button>
+                </div>
+                
+                <div class="output hidden" id="output">
+                    <h3>Generated JavaScript Object:</h3>
+                    <pre id="generatedCode"></pre>
+                    <div class="buttons">
+                        <button type="button" class="btn-primary" onclick="copyToClipboard()">Copy to Clipboard</button>
+                        <button type="button" class="btn-secondary" onclick="downloadFile()">Download as .js File</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="DefaultSchedule.js"></script>
+    <script>
+        let classCounter = 0;
+        let eventCounter = 0;
+        let overrideCounter = 0;
+        let loadedScheduleData = null;
+        
+        // Toggle data source mode
+        function toggleDataSource() {
+            const dataSource = document.querySelector('input[name="dataSource"]:checked').value;
+            const importSection = document.getElementById('importSection');
+            
+            if (dataSource === 'import') {
+                importSection.classList.remove('hidden');
+                loadDataSource(); // Auto-load default source
+            } else {
+                importSection.classList.add('hidden');
+                document.getElementById('currentScheduleInfo').classList.add('hidden');
+                clearAllData();
+            }
+        }
+        
+        // Load data source
+        function loadDataSource() {
+            const sourceFile = document.getElementById('dataSourceFile').value;
+            const customSection = document.getElementById('customSourceSection');
+            const identifierSelect = document.getElementById('scheduleIdentifier');
+            
+            if (sourceFile === 'custom') {
+                customSection.classList.remove('hidden');
+                identifierSelect.innerHTML = '<option value="">Select schedule...</option>';
+            } else {
+                customSection.classList.add('hidden');
+                if (sourceFile === 'DefaultSchedule.js') {
+                    loadDefaultSchedule();
+                }
+            }
+        }
+        
+        // Load DefaultSchedule.js data
+        function loadDefaultSchedule() {
+            try {
+                if (typeof DEFAULT_SCHEDULE !== 'undefined') {
+                    loadedScheduleData = DEFAULT_SCHEDULE;
+                    populateScheduleIdentifiers();
+                } else {
+                    alert('DefaultSchedule.js not found. Please ensure the file is loaded.');
+                }
+            } catch (error) {
+                alert('Error loading DefaultSchedule.js: ' + error.message);
+            }
+        }
+        
+        // Parse custom data
+        function parseCustomData() {
+            const customData = document.getElementById('customSource').value.trim();
+            if (!customData) {
+                alert('Please paste data first.');
+                return;
+            }
+            
+            try {
+                // Try to parse as JSON first
+                let data;
+                if (customData.startsWith('{')) {
+                    data = JSON.parse(customData);
+                } else {
+                    // Try to evaluate as JavaScript (be careful with this in production!)
+                    data = eval('(' + customData + ')');
+                }
+                
+                loadedScheduleData = data;
+                populateScheduleIdentifiers();
+                alert('Data parsed successfully!');
+            } catch (error) {
+                alert('Error parsing data: ' + error.message);
+            }
+        }
+        
+        // Populate schedule identifier dropdown
+        function populateScheduleIdentifiers() {
+            const identifierSelect = document.getElementById('scheduleIdentifier');
+            identifierSelect.innerHTML = '<option value="">Select schedule...</option>';
+            
+            if (loadedScheduleData) {
+                Object.keys(loadedScheduleData).forEach(identifier => {
+                    const option = document.createElement('option');
+                    option.value = identifier;
+                    option.textContent = identifier;
+                    identifierSelect.appendChild(option);
+                });
+            }
+        }
+        
+        // Load specific schedule data
+        function loadScheduleData() {
+            const identifier = document.getElementById('scheduleIdentifier').value;
+            if (!identifier || !loadedScheduleData || !loadedScheduleData[identifier]) {
+                document.getElementById('currentScheduleInfo').classList.add('hidden');
+                return;
+            }
+            
+            const scheduleData = loadedScheduleData[identifier];
+            
+            // Update info display
+            document.getElementById('loadedScheduleName').textContent = identifier;
+            document.getElementById('loadedScheduleUpdated').textContent = scheduleData.metadata?.updated || 'Unknown';
+            document.getElementById('loadedClassCount').textContent = scheduleData.schedules?.regularClasses?.length || 0;
+            document.getElementById('loadedEventCount').textContent = scheduleData.schedules?.events?.length || 0;
+            document.getElementById('loadedOverrideCount').textContent = scheduleData.schedules?.overrides?.length || 0;
+            document.getElementById('currentScheduleInfo').classList.remove('hidden');
+            
+            // Clear existing data
+            clearAllData();
+            
+            // Load metadata
+            if (scheduleData.metadata) {
+                loadMetadata(scheduleData.metadata);
+            }
+            
+            // Load regular classes
+            if (scheduleData.schedules?.regularClasses) {
+                loadRegularClasses(scheduleData.schedules.regularClasses);
+            }
+            
+            // Load events
+            if (scheduleData.schedules?.events) {
+                loadEvents(scheduleData.schedules.events);
+            }
+            
+            // Load overrides
+            if (scheduleData.schedules?.overrides) {
+                loadOverrides(scheduleData.schedules.overrides);
+            }
+            
+            alert('Schedule data loaded successfully!');
+        }
+        
+        // Load metadata into form
+        function loadMetadata(metadata) {
+            if (metadata.identifier) document.getElementById('identifier').value = metadata.identifier;
+            if (metadata.major) document.getElementById('major').value = metadata.major;
+            if (metadata.class) document.getElementById('class').value = metadata.class;
+            if (metadata.academicYear) document.getElementById('academicYear').value = metadata.academicYear;
+            if (metadata.semester) document.getElementById('semester').value = metadata.semester;
+            
+            // Convert DD-MM-YYYY to YYYY-MM-DD for date inputs
+            if (metadata.start) {
+                const startParts = metadata.start.split('-');
+                if (startParts.length === 3) {
+                    document.getElementById('startDate').value = `${startParts[2]}-${startParts[1]}-${startParts[0]}`;
+                }
+            }
+            if (metadata.end) {
+                const endParts = metadata.end.split('-');
+                if (endParts.length === 3) {
+                    document.getElementById('endDate').value = `${endParts[2]}-${endParts[1]}-${endParts[0]}`;
+                }
+            }
+        }
+        
+        // Load regular classes
+        function loadRegularClasses(classes) {
+            classes.forEach(classData => {
+                addClass();
+                const currentClassId = classCounter;
+                
+                // Set basic data
+                document.getElementById(`subject-${currentClassId}`).value = classData.subject || '';
+                document.getElementById(`classroom-${currentClassId}`).value = classData.classroom || '';
+                document.getElementById(`lecturer-${currentClassId}`).value = classData.lecturer || '';
+                
+                // Set days
+                if (classData.day) {
+                    classData.day.forEach(day => {
+                        const checkbox = document.querySelector(`input[name="day-${currentClassId}"][value="${day}"]`);
+                        if (checkbox) checkbox.checked = true;
+                    });
+                }
+                
+                // Set time slots
+                if (classData.time && classData.time.length > 0) {
+                    const timeContainer = document.getElementById(`timeSlots-${currentClassId}`);
+                    const existingSlots = timeContainer.querySelectorAll('.time-slot');
+                    
+                    // Remove existing slot
+                    existingSlots[0].remove();
+                    
+                    // Add all time slots
+                    classData.time.forEach((timeSlot, index) => {
+                        if (index > 0) addTimeSlot(currentClassId);
+                        
+                        const slots = timeContainer.querySelectorAll('.time-slot');
+                        const currentSlot = slots[index];
+                        
+                        if (currentSlot) {
+                            currentSlot.querySelector('.start-time').value = timeSlot.start || '';
+                            currentSlot.querySelector('.end-time').value = timeSlot.end || '';
+                            currentSlot.querySelector('.tolerance-time').value = timeSlot.tolerance || '';
+                        }
+                    });
+                }
+                
+                // Set location array
+                if (classData.location && classData.location.length === 16) {
+                    classData.location.forEach((location, index) => {
+                        const select = document.querySelector(`select[name="location-${currentClassId}-${index + 1}"]`);
+                        if (select) {
+                            select.value = location;
+                            updateLocationColor(select);
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Load events
+        function loadEvents(events) {
+            events.forEach(eventData => {
+                addEvent();
+                const currentEventId = eventCounter;
+                
+                document.getElementById(`event-subject-${currentEventId}`).value = eventData.subject || '';
+                document.getElementById(`event-type-${currentEventId}`).value = eventData.type || '';
+                
+                // Set days
+                if (eventData.day) {
+                    eventData.day.forEach(day => {
+                        const checkbox = document.querySelector(`input[name="event-day-${currentEventId}"][value="${day}"]`);
+                        if (checkbox) checkbox.checked = true;
+                    });
+                }
+                
+                // Set time
+                if (eventData.time && eventData.time[0]) {
+                    document.getElementById(`event-start-${currentEventId}`).value = eventData.time[0].start || '';
+                    document.getElementById(`event-end-${currentEventId}`).value = eventData.time[0].end || '';
+                }
+            });
+        }
+        
+        // Load overrides
+        function loadOverrides(overrides) {
+            overrides.forEach(overrideData => {
+                addOverride();
+                const currentOverrideId = overrideCounter;
+                
+                // Set subject (use custom input for now)
+                document.querySelector(`input[name="subject-type-${currentOverrideId}"][value="custom"]`).checked = true;
+                toggleSubjectType(currentOverrideId);
+                document.getElementById(`override-subject-input-${currentOverrideId}`).value = overrideData.subject || '';
+                
+                document.getElementById(`override-type-${currentOverrideId}`).value = overrideData.type || '';
+                toggleOverrideFields(currentOverrideId);
+                
+                // Set date
+                if (overrideData.date) {
+                    if (typeof overrideData.date === 'string') {
+                        // Single date
+                        const dateParts = overrideData.date.split('-');
+                        if (dateParts.length === 3) {
+                            document.getElementById(`override-date-${currentOverrideId}`).value = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+                        }
+                    } else if (overrideData.date.start && overrideData.date.end) {
+                        // Date range
+                        document.querySelector(`input[name="date-type-${currentOverrideId}"][value="range"]`).checked = true;
+                        toggleDateType(currentOverrideId);
+                        
+                        const startParts = overrideData.date.start.split('-');
+                        const endParts = overrideData.date.end.split('-');
+                        
+                        if (startParts.length === 3) {
+                            document.getElementById(`override-start-date-${currentOverrideId}`).value = `${startParts[2]}-${startParts[1]}-${startParts[0]}`;
+                        }
+                        if (endParts.length === 3) {
+                            document.getElementById(`override-end-date-${currentOverrideId}`).value = `${endParts[2]}-${endParts[1]}-${endParts[0]}`;
+                        }
+                    }
+                }
+                
+                // Set exam-specific fields
+                if (overrideData.type === 'EXAM') {
+                    if (overrideData.examType) document.getElementById(`exam-type-${currentOverrideId}`).value = overrideData.examType;
+                    if (overrideData.classroom) document.getElementById(`override-classroom-${currentOverrideId}`).value = overrideData.classroom;
+                    if (overrideData.location) document.getElementById(`override-location-${currentOverrideId}`).value = overrideData.location;
+                    
+                    if (overrideData.time && overrideData.time[0]) {
+                        document.getElementById(`override-time-start-${currentOverrideId}`).value = overrideData.time[0].start || '';
+                        document.getElementById(`override-time-end-${currentOverrideId}`).value = overrideData.time[0].end || '';
+                    }
+                }
+                
+                // Set replacement-specific fields
+                if (overrideData.type === 'REPLACEMENT') {
+                    if (overrideData.classroom) {
+                        document.getElementById(`replacement-classroom-${currentOverrideId}`).value = overrideData.classroom;
+                    }
+                    if (overrideData.time && overrideData.time[0]) {
+                        document.getElementById(`replacement-time-start-${currentOverrideId}`).value = overrideData.time[0].start || '';
+                        document.getElementById(`replacement-time-end-${currentOverrideId}`).value = overrideData.time[0].end || '';
+                    }
+                }
+            });
+        }
+        
+        // Clear all data
+        function clearAllData() {
+            document.getElementById('regularClasses').innerHTML = '';
+            document.getElementById('eventsContainer').innerHTML = '';
+            document.getElementById('overridesContainer').innerHTML = '';
+            document.getElementById('output').classList.add('hidden');
+            
+            // Reset metadata fields
+            document.getElementById('identifier').value = '';
+            document.getElementById('major').value = '';
+            document.getElementById('class').value = '';
+            document.getElementById('academicYear').value = '';
+            document.getElementById('semester').value = '';
+            document.getElementById('startDate').value = '';
+            document.getElementById('endDate').value = '';
+            
+            classCounter = 0;
+            eventCounter = 0;
+            overrideCounter = 0;
+        }
+        
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const tabButtons = document.querySelectorAll('.tab');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Add new class
+        function addClass() {
+            classCounter++;
+            const container = document.getElementById('regularClasses');
+            const classDiv = document.createElement('div');
+            classDiv.className = 'class-item';
+            classDiv.id = `class-${classCounter}`;
+            
+            classDiv.innerHTML = `
+                <div class="class-header">
+                    <div class="class-title">Class ${classCounter}</div>
+                    <div class="class-actions">
+                        <button type="button" class="btn-danger btn-small" onclick="removeClass(${classCounter})">Remove</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject-${classCounter}">Subject Name:</label>
+                    <input type="text" id="subject-${classCounter}" name="subject" required 
+                           placeholder="e.g., Organisasi dan Arsitektur Komputer (Teori)"
+                           onchange="updateSubjectDropdowns()">
+                </div>
+                
+                <div class="form-group">
+                    <label>Days of the Week:</label>
+                    <div class="day-checkboxes" id="days-${classCounter}">
+                        <label><input type="checkbox" name="day-${classCounter}" value="1"> Monday</label>
+                        <label><input type="checkbox" name="day-${classCounter}" value="2"> Tuesday</label>
+                        <label><input type="checkbox" name="day-${classCounter}" value="3"> Wednesday</label>
+                        <label><input type="checkbox" name="day-${classCounter}" value="4"> Thursday</label>
+                        <label><input type="checkbox" name="day-${classCounter}" value="5"> Friday</label>
+                        <label><input type="checkbox" name="day-${classCounter}" value="6"> Saturday</label>
+                        <label><input type="checkbox" name="day-${classCounter}" value="7"> Sunday</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="classroom-${classCounter}">Classroom:</label>
+                    <input type="text" id="classroom-${classCounter}" name="classroom" required 
+                           placeholder="e.g., B.T4/L4">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lecturer-${classCounter}">Lecturer:</label>
+                    <input type="text" id="lecturer-${classCounter}" name="lecturer" required 
+                           placeholder="e.g., Florida N.S. Damanik, S.T., M.M.">
+                </div>
+                
+                <div class="form-group">
+                    <label>Time Slots:</label>
+                    <div class="time-slots" id="timeSlots-${classCounter}">
+                        <div class="time-slot">
+                            <div>
+                                <label>Start Time:</label>
+                                <input type="time" class="start-time" required>
+                            </div>
+                            <div>
+                                <label>End Time:</label>
+                                <input type="time" class="end-time" required>
+                            </div>
+                            <div>
+                                <label>Tolerance:</label>
+                                <input type="time" class="tolerance-time" required>
+                            </div>
+                            <div>
+                                <button type="button" class="btn-danger btn-small" onclick="removeTimeSlot(this)">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-secondary btn-small" onclick="addTimeSlot(${classCounter})">Add Time Slot</button>
+                </div>
+                
+                <div class="form-group">
+                    <label>Location Array (16 meetings):</label>
+                    <div class="location-editor">
+                        <p>Select the location type for each of the 16 meetings:</p>
+                        <div class="location-grid" id="locationGrid-${classCounter}">
+                            <!-- 16 meeting slots will be generated by JavaScript -->
+                        </div>
+                        <div class="location-legend">
+                            <div class="legend-item">
+                                <div class="legend-color unknown"></div>
+                                <span>0 = Unknown</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color onsite"></div>
+                                <span>1 = Onsite</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color online"></div>
+                                <span>2 = Online</span>
+                            </div>
+                        </div>
+                        <div class="bulk-actions">
+                            <button type="button" class="btn-secondary btn-small" onclick="setAllLocations(${classCounter}, 0)">All Unknown</button>
+                            <button type="button" class="btn-success btn-small" onclick="setAllLocations(${classCounter}, 1)">All Onsite</button>
+                            <button type="button" class="btn-primary btn-small" onclick="setAllLocations(${classCounter}, 2)">All Online</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(classDiv);
+            initializeLocationGrid(classCounter);
+            
+            // Update subject dropdowns in overrides
+            updateSubjectDropdowns();
+        }
+        
+        // Remove class
+        function removeClass(id) {
+            const classDiv = document.getElementById(`class-${id}`);
+            classDiv.remove();
+            
+            // Update subject dropdowns in overrides
+            updateSubjectDropdowns();
+        }
+        
+        // Initialize location grid for a specific class
+        function initializeLocationGrid(classId) {
+            const grid = document.getElementById(`locationGrid-${classId}`);
+            grid.innerHTML = '';
+            
+            for (let i = 1; i <= 16; i++) {
+                const slot = document.createElement('div');
+                slot.className = 'meeting-slot';
+                slot.innerHTML = `
+                    <label>Meeting ${i}</label>
+                    <select name="location-${classId}-${i}" onchange="updateLocationColor(this)">
+                        <option value="0">Unknown</option>
+                        <option value="1" selected>Onsite</option>
+                        <option value="2">Online</option>
+                    </select>
+                `;
+                grid.appendChild(slot);
+            }
+        }
+        
+        // Update visual feedback for location selection
+        function updateLocationColor(select) {
+            const slot = select.parentElement;
+            slot.className = 'meeting-slot';
+            
+            if (select.value === '0') {
+                slot.classList.add('unknown');
+            } else if (select.value === '1') {
+                slot.classList.add('onsite');
+            } else if (select.value === '2') {
+                slot.classList.add('online');
+            }
+        }
+        
+        // Set all locations for a specific class
+        function setAllLocations(classId, value) {
+            for (let i = 1; i <= 16; i++) {
+                const select = document.querySelector(`select[name="location-${classId}-${i}"]`);
+                select.value = value;
+                updateLocationColor(select);
+            }
+        }
+        
+        // Add time slot to a specific class
+        function addTimeSlot(classId) {
+            const container = document.getElementById(`timeSlots-${classId}`);
+            const newSlot = document.createElement('div');
+            newSlot.className = 'time-slot';
+            newSlot.innerHTML = `
+                <div>
+                    <label>Start Time:</label>
+                    <input type="time" class="start-time" required>
+                </div>
+                <div>
+                    <label>End Time:</label>
+                    <input type="time" class="end-time" required>
+                </div>
+                <div>
+                    <label>Tolerance:</label>
+                    <input type="time" class="tolerance-time" required>
+                </div>
+                <div>
+                    <button type="button" class="btn-danger btn-small" onclick="removeTimeSlot(this)">Remove</button>
+                </div>
+            `;
+            container.appendChild(newSlot);
+        }
+        
+        // Remove time slot
+        function removeTimeSlot(button) {
+            const container = button.closest('.time-slots');
+            const timeSlots = container.querySelectorAll('.time-slot');
+            if (timeSlots.length > 1) {
+                button.closest('.time-slot').remove();
+            } else {
+                alert('You must have at least one time slot.');
+            }
+        }
+        
+        // Add event
+        function addEvent() {
+            eventCounter++;
+            const container = document.getElementById('eventsContainer');
+            const eventDiv = document.createElement('div');
+            eventDiv.className = 'override-item';
+            eventDiv.id = `event-${eventCounter}`;
+            
+            eventDiv.innerHTML = `
+                <div class="override-header">
+                    <h4>Event ${eventCounter}</h4>
+                    <button type="button" class="btn-danger btn-small" onclick="removeEvent(${eventCounter})">Remove</button>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="event-subject-${eventCounter}">Subject:</label>
+                        <input type="text" id="event-subject-${eventCounter}" name="subject" required 
+                               placeholder="e.g., Istirahat">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type-${eventCounter}">Type:</label>
+                        <select id="event-type-${eventCounter}" name="type" required>
+                            <option value="BREAK" selected>BREAK</option>
+                            <option value="OTHER">OTHER</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Days:</label>
+                    <div class="day-checkboxes">
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="1"> Monday</label>
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="2"> Tuesday</label>
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="3"> Wednesday</label>
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="4"> Thursday</label>
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="5"> Friday</label>
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="6"> Saturday</label>
+                        <label><input type="checkbox" name="event-day-${eventCounter}" value="7"> Sunday</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Time:</label>
+                    <div class="form-row">
+                        <div>
+                            <label for="event-start-${eventCounter}">Start Time:</label>
+                            <input type="time" id="event-start-${eventCounter}" name="start" required>
+                        </div>
+                        <div>
+                            <label for="event-end-${eventCounter}">End Time:</label>
+                            <input type="time" id="event-end-${eventCounter}" name="end" required>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(eventDiv);
+        }
+        
+        // Remove event
+        function removeEvent(id) {
+            document.getElementById(`event-${id}`).remove();
+        }
+        
+        // Add override
+        function addOverride() {
+            overrideCounter++;
+            const container = document.getElementById('overridesContainer');
+            const overrideDiv = document.createElement('div');
+            overrideDiv.className = 'override-item';
+            overrideDiv.id = `override-${overrideCounter}`;
+            
+            overrideDiv.innerHTML = `
+                <div class="override-header">
+                    <h4>Override ${overrideCounter}</h4>
+                    <button type="button" class="btn-danger btn-small" onclick="removeOverride(${overrideCounter})">Remove</button>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="override-subject-${overrideCounter}">Subject:</label>
+                        <div>
+                            <label>
+                                <input type="radio" name="subject-type-${overrideCounter}" value="existing" checked onchange="toggleSubjectType(${overrideCounter})"> Select from Classes
+                            </label>
+                            <label>
+                                <input type="radio" name="subject-type-${overrideCounter}" value="custom" onchange="toggleSubjectType(${overrideCounter})"> Custom Subject
+                            </label>
+                        </div>
+                        <div id="existing-subject-${overrideCounter}">
+                            <select id="override-subject-select-${overrideCounter}" name="subjectSelect">
+                                <option value="">Select a class subject...</option>
+                            </select>
+                        </div>
+                        <div id="custom-subject-${overrideCounter}" class="hidden">
+                            <input type="text" id="override-subject-input-${overrideCounter}" name="subjectInput" 
+                                   placeholder="e.g., Libur Idul Fitri">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="override-type-${overrideCounter}">Type:</label>
+                        <select id="override-type-${overrideCounter}" name="type" required onchange="toggleOverrideFields(${overrideCounter})">
+                            <option value="">Select Type</option>
+                            <option value="HOLIDAY">HOLIDAY</option>
+                            <option value="EXAM">EXAM</option>
+                            <option value="REPLACEMENT">REPLACEMENT</option>
+                            <option value="NOSHOW">NOSHOW</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Date:</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="date-type-${overrideCounter}" value="single" checked onchange="toggleDateType(${overrideCounter})"> Single Date
+                        </label>
+                        <label>
+                            <input type="radio" name="date-type-${overrideCounter}" value="range" onchange="toggleDateType(${overrideCounter})"> Date Range
+                        </label>
+                    </div>
+                    <div id="single-date-${overrideCounter}">
+                        <input type="date" id="override-date-${overrideCounter}" name="date">
+                    </div>
+                    <div id="date-range-${overrideCounter}" class="hidden">
+                        <div class="date-range">
+                            <input type="date" id="override-start-date-${overrideCounter}" name="startDate">
+                            <span>to</span>
+                            <input type="date" id="override-end-date-${overrideCounter}" name="endDate">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="exam-fields-${overrideCounter}" class="hidden">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="exam-type-${overrideCounter}">Exam Type:</label>
+                            <select id="exam-type-${overrideCounter}" name="examType">
+                                <option value="UTS">UTS</option>
+                                <option value="UAS">UAS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="override-classroom-${overrideCounter}">Classroom:</label>
+                            <input type="text" id="override-classroom-${overrideCounter}" name="classroom" 
+                                   placeholder="e.g., CEK MIKA">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="override-time-start-${overrideCounter}">Start Time:</label>
+                            <input type="time" id="override-time-start-${overrideCounter}" name="timeStart">
+                        </div>
+                        <div class="form-group">
+                            <label for="override-time-end-${overrideCounter}">End Time:</label>
+                            <input type="time" id="override-time-end-${overrideCounter}" name="timeEnd">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="override-location-${overrideCounter}">Location:</label>
+                        <select id="override-location-${overrideCounter}" name="location">
+                            <option value="0">Unknown</option>
+                            <option value="1" selected>Onsite</option>
+                            <option value="2">Online</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="replacement-fields-${overrideCounter}" class="hidden">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="replacement-classroom-${overrideCounter}">Classroom (Optional):</label>
+                            <input type="text" id="replacement-classroom-${overrideCounter}" name="replacementClassroom" 
+                                   placeholder="e.g., B.T4/L4">
+                        </div>
+                        <div class="form-group"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="replacement-time-start-${overrideCounter}">Start Time (Optional):</label>
+                            <input type="time" id="replacement-time-start-${overrideCounter}" name="replacementTimeStart">
+                        </div>
+                        <div class="form-group">
+                            <label for="replacement-time-end-${overrideCounter}">End Time (Optional):</label>
+                            <input type="time" id="replacement-time-end-${overrideCounter}" name="replacementTimeEnd">
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(overrideDiv);
+            updateSubjectDropdowns();
+        }
+        
+        // Remove override
+        function removeOverride(id) {
+            document.getElementById(`override-${id}`).remove();
+        }
+        
+        // Toggle subject type (existing vs custom)
+        function toggleSubjectType(id) {
+            const subjectType = document.querySelector(`input[name="subject-type-${id}"]:checked`).value;
+            const existingSubject = document.getElementById(`existing-subject-${id}`);
+            const customSubject = document.getElementById(`custom-subject-${id}`);
+            
+            if (subjectType === 'existing') {
+                existingSubject.classList.remove('hidden');
+                customSubject.classList.add('hidden');
+            } else {
+                existingSubject.classList.add('hidden');
+                customSubject.classList.remove('hidden');
+            }
+        }
+        
+        // Update subject dropdowns with current regular classes
+        function updateSubjectDropdowns() {
+            // Get all regular class subjects
+            const subjects = [];
+            const classItems = document.querySelectorAll('.class-item');
+            
+            classItems.forEach(classItem => {
+                const classId = classItem.id.split('-')[1];
+                const subjectElement = document.getElementById(`subject-${classId}`);
+                if (subjectElement && subjectElement.value.trim()) {
+                    subjects.push(subjectElement.value.trim());
+                }
+            });
+            
+            // Update all override subject dropdowns
+            const overrideItems = document.querySelectorAll('#overridesContainer .override-item');
+            overrideItems.forEach(overrideItem => {
+                const overrideId = overrideItem.id.split('-')[1];
+                const selectElement = document.getElementById(`override-subject-select-${overrideId}`);
+                
+                if (selectElement) {
+                    const currentValue = selectElement.value;
+                    selectElement.innerHTML = '<option value="">Select a class subject...</option>';
+                    
+                    subjects.forEach(subject => {
+                        const option = document.createElement('option');
+                        option.value = subject;
+                        option.textContent = subject;
+                        if (subject === currentValue) {
+                            option.selected = true;
+                        }
+                        selectElement.appendChild(option);
+                    });
+                }
+            });
+        }
+        
+        // Toggle override fields based on type
+        function toggleOverrideFields(id) {
+            const type = document.getElementById(`override-type-${id}`).value;
+            const examFields = document.getElementById(`exam-fields-${id}`);
+            const replacementFields = document.getElementById(`replacement-fields-${id}`);
+            
+            examFields.classList.add('hidden');
+            replacementFields.classList.add('hidden');
+            
+            if (type === 'EXAM') {
+                examFields.classList.remove('hidden');
+            } else if (type === 'REPLACEMENT') {
+                replacementFields.classList.remove('hidden');
+            }
+        }
+        
+        // Toggle date type (single vs range)
+        function toggleDateType(id) {
+            const dateType = document.querySelector(`input[name="date-type-${id}"]:checked`).value;
+            const singleDate = document.getElementById(`single-date-${id}`);
+            const dateRange = document.getElementById(`date-range-${id}`);
+            
+            if (dateType === 'single') {
+                singleDate.classList.remove('hidden');
+                dateRange.classList.add('hidden');
+            } else {
+                singleDate.classList.add('hidden');
+                dateRange.classList.remove('hidden');
+            }
+        }
+        
+        // Generate complete schedule
+        function generateSchedule() {
+            const schedule = {
+                metadata: generateMetadata(),
+                schedules: {
+                    regularClasses: generateRegularClasses(),
+                    events: generateEvents(),
+                    overrides: generateOverrides()
+                }
+            };
+            
+            const output = document.getElementById('output');
+            const codeElement = document.getElementById('generatedCode');
+            
+            // Create the complete structure with identifier as key
+            const identifier = document.getElementById('identifier').value;
+            const completeSchedule = {
+                [identifier]: schedule
+            };
+            
+            codeElement.textContent = JSON.stringify(completeSchedule, null, 4);
+            output.classList.remove('hidden');
+            
+            // Switch to output tab
+            showTab('output');
+        }
+        
+        // Generate metadata
+        function generateMetadata() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            
+            // Convert dates to DD-MM-YYYY format
+            const formatDate = (dateString) => {
+                const date = new Date(dateString);
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const year = date.getFullYear();
+                return `${day}-${month}-${year}`;
+            };
+            
+            const currentDate = new Date();
+            const updated = formatDate(currentDate.toISOString().split('T')[0]);
+            
+            return {
+                identifier: document.getElementById('identifier').value,
+                major: document.getElementById('major').value,
+                class: document.getElementById('class').value,
+                start: formatDate(startDate),
+                end: formatDate(endDate),
+                semester: parseInt(document.getElementById('semester').value),
+                academicYear: document.getElementById('academicYear').value,
+                updated: updated
+            };
+        }
+        
+        // Generate regular classes
+        function generateRegularClasses() {
+            const classes = [];
+            const classItems = document.querySelectorAll('.class-item');
+            
+            classItems.forEach(classItem => {
+                const classId = classItem.id.split('-')[1];
+                
+                // Get basic data
+                const subject = document.getElementById(`subject-${classId}`).value;
+                const classroom = document.getElementById(`classroom-${classId}`).value;
+                const lecturer = document.getElementById(`lecturer-${classId}`).value;
+                
+                // Get selected days
+                const days = [];
+                const dayCheckboxes = classItem.querySelectorAll(`input[name="day-${classId}"]:checked`);
+                dayCheckboxes.forEach(checkbox => {
+                    days.push(parseInt(checkbox.value));
+                });
+                
+                // Get time slots
+                const timeSlots = [];
+                const timeSlotElements = classItem.querySelectorAll('.time-slot');
+                
+                timeSlotElements.forEach(slot => {
+                    const startTime = slot.querySelector('.start-time').value;
+                    const endTime = slot.querySelector('.end-time').value;
+                    const toleranceTime = slot.querySelector('.tolerance-time').value;
+                    
+                    if (startTime && endTime && toleranceTime) {
+                        timeSlots.push({
+                            start: startTime,
+                            end: endTime,
+                            tolerance: toleranceTime
+                        });
+                    }
+                });
+                
+                // Get location array
+                const location = [];
+                for (let i = 1; i <= 16; i++) {
+                    const select = document.querySelector(`select[name="location-${classId}-${i}"]`);
+                    if (select) {
+                        location.push(parseInt(select.value));
+                    }
+                }
+                
+                if (subject && days.length > 0 && timeSlots.length > 0) {
+                    classes.push({
+                        subject: subject,
+                        day: days,
+                        type: "REGULAR",
+                        classroom: classroom,
+                        lecturer: lecturer,
+                        time: timeSlots,
+                        location: location
+                    });
+                }
+            });
+            
+            return classes;
+        }
+        
+        // Generate events
+        function generateEvents() {
+            const events = [];
+            const eventItems = document.querySelectorAll('#eventsContainer .override-item');
+            
+            eventItems.forEach(eventItem => {
+                const eventId = eventItem.id.split('-')[1];
+                
+                const subject = document.getElementById(`event-subject-${eventId}`).value;
+                const type = document.getElementById(`event-type-${eventId}`).value;
+                const startTime = document.getElementById(`event-start-${eventId}`).value;
+                const endTime = document.getElementById(`event-end-${eventId}`).value;
+                
+                // Get selected days
+                const days = [];
+                const dayCheckboxes = eventItem.querySelectorAll(`input[name="event-day-${eventId}"]:checked`);
+                dayCheckboxes.forEach(checkbox => {
+                    days.push(parseInt(checkbox.value));
+                });
+                
+                if (subject && days.length > 0 && startTime && endTime) {
+                    events.push({
+                        subject: subject,
+                        day: days,
+                        type: type,
+                        time: [{
+                            start: startTime,
+                            end: endTime
+                        }]
+                    });
+                }
+            });
+            
+            return events;
+        }
+        
+        // Generate overrides
+        function generateOverrides() {
+            const overrides = [];
+            const overrideItems = document.querySelectorAll('#overridesContainer .override-item');
+            
+            overrideItems.forEach(overrideItem => {
+                const overrideId = overrideItem.id.split('-')[1];
+                
+                // Get subject based on type selection
+                let subject = '';
+                const subjectType = document.querySelector(`input[name="subject-type-${overrideId}"]:checked`).value;
+                if (subjectType === 'existing') {
+                    subject = document.getElementById(`override-subject-select-${overrideId}`).value;
+                } else {
+                    subject = document.getElementById(`override-subject-input-${overrideId}`).value;
+                }
+                
+                const type = document.getElementById(`override-type-${overrideId}`).value;
+                
+                if (!subject || !type) return;
+                
+                const override = {
+                    subject: subject,
+                    type: type
+                };
+                
+                // Handle date
+                const dateType = document.querySelector(`input[name="date-type-${overrideId}"]:checked`).value;
+                if (dateType === 'single') {
+                    const date = document.getElementById(`override-date-${overrideId}`).value;
+                    if (date) {
+                        const formatDate = (dateString) => {
+                            const date = new Date(dateString);
+                            const day = String(date.getDate()).padStart(2, '0');
+                            const month = String(date.getMonth() + 1).padStart(2, '0');
+                            const year = date.getFullYear();
+                            return `${day}-${month}-${year}`;
+                        };
+                        override.date = formatDate(date);
+                    }
+                } else {
+                    const startDate = document.getElementById(`override-start-date-${overrideId}`).value;
+                    const endDate = document.getElementById(`override-end-date-${overrideId}`).value;
+                    if (startDate && endDate) {
+                        const formatDate = (dateString) => {
+                            const date = new Date(dateString);
+                            const day = String(date.getDate()).padStart(2, '0');
+                            const month = String(date.getMonth() + 1).padStart(2, '0');
+                            const year = date.getFullYear();
+                            return `${day}-${month}-${year}`;
+                        };
+                        override.date = {
+                            start: formatDate(startDate),
+                            end: formatDate(endDate)
+                        };
+                    }
+                }
+                
+                // Handle exam-specific fields
+                if (type === 'EXAM') {
+                    const examType = document.getElementById(`exam-type-${overrideId}`).value;
+                    const classroom = document.getElementById(`override-classroom-${overrideId}`).value;
+                    const timeStart = document.getElementById(`override-time-start-${overrideId}`).value;
+                    const timeEnd = document.getElementById(`override-time-end-${overrideId}`).value;
+                    const location = document.getElementById(`override-location-${overrideId}`).value;
+                    
+                    if (examType) override.examType = examType;
+                    if (classroom) override.classroom = classroom;
+                    if (timeStart && timeEnd) {
+                        override.time = [{
+                            start: timeStart,
+                            end: timeEnd
+                        }];
+                    }
+                    if (location) override.location = parseInt(location);
+                }
+                
+                // Handle replacement-specific fields
+                if (type === 'REPLACEMENT') {
+                    const classroom = document.getElementById(`replacement-classroom-${overrideId}`).value;
+                    const timeStart = document.getElementById(`replacement-time-start-${overrideId}`).value;
+                    const timeEnd = document.getElementById(`replacement-time-end-${overrideId}`).value;
+                    
+                    if (classroom) {
+                        override.classroom = classroom;
+                    }
+                    
+                    if (timeStart && timeEnd) {
+                        override.time = [{
+                            start: timeStart,
+                            end: timeEnd
+                        }];
+                    }
+                }
+                
+                overrides.push(override);
+            });
+            
+            return overrides;
+        }
+        
+        // Copy to clipboard
+        function copyToClipboard() {
+            const code = document.getElementById('generatedCode').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy code: ' + err);
+            });
+        }
+        
+        // Download as file
+        function downloadFile() {
+            const code = document.getElementById('generatedCode').textContent;
+            const blob = new Blob(['const DEFAULT_SCHEDULE = ' + code + ';'], { type: 'text/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'schedule.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        // Reset all
+        function resetAll() {
+            if (confirm('Are you sure you want to reset all data?')) {
+                clearAllData();
+                
+                // Reset data source selection
+                document.querySelector('input[name="dataSource"][value="create"]').checked = true;
+                toggleDataSource();
+            }
+        }
+        
+        // Load example data
+        function loadExample() {
+            // Set metadata
+            document.getElementById('identifier').value = '4-IFBSORE-2425';
+            document.getElementById('major').value = 'S-1 / Teknik Informatika';
+            document.getElementById('class').value = 'IF-B-SORE';
+            document.getElementById('academicYear').value = '2024/2025';
+            document.getElementById('semester').value = '4';
+            document.getElementById('startDate').value = '2025-03-03';
+            document.getElementById('endDate').value = '2026-03-03';
+            
+            // Add example class
+            addClass();
+            const classId = classCounter;
+            
+            document.getElementById(`subject-${classId}`).value = 'Organisasi dan Arsitektur Komputer (Teori)';
+            document.querySelector(`input[name="day-${classId}"][value="1"]`).checked = true;
+            document.getElementById(`classroom-${classId}`).value = 'B.T4/L4';
+            document.getElementById(`lecturer-${classId}`).value = 'Florida N.S. Damanik, S.T., M.M.';
+            
+            // Set time slots
+            const timeSlots = document.querySelectorAll(`#timeSlots-${classId} .time-slot`);
+            addTimeSlot(classId);
+            
+            const firstSlot = timeSlots[0];
+            firstSlot.querySelector('.start-time').value = '17:45';
+            firstSlot.querySelector('.end-time').value = '19:10';
+            firstSlot.querySelector('.tolerance-time').value = '18:00';
+            
+            const allTimeSlots = document.querySelectorAll(`#timeSlots-${classId} .time-slot`);
+            const secondSlot = allTimeSlots[1];
+            secondSlot.querySelector('.start-time').value = '19:30';
+            secondSlot.querySelector('.end-time').value = '20:50';
+            secondSlot.querySelector('.tolerance-time').value = '19:40';
+            
+            // Set example location pattern
+            const exampleLocations = [1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1];
+            for (let i = 1; i <= 16; i++) {
+                const select = document.querySelector(`select[name="location-${classId}-${i}"]`);
+                select.value = exampleLocations[i-1];
+                updateLocationColor(select);
+            }
+            
+            // Add example event
+            addEvent();
+            const eventId = eventCounter;
+            document.getElementById(`event-subject-${eventId}`).value = 'Istirahat';
+            document.getElementById(`event-type-${eventId}`).value = 'BREAK';
+            document.getElementById(`event-start-${eventId}`).value = '19:10';
+            document.getElementById(`event-end-${eventId}`).value = '19:30';
+            
+            // Check all weekdays for the break
+            for (let day = 1; day <= 5; day++) {
+                document.querySelector(`input[name="event-day-${eventId}"][value="${day}"]`).checked = true;
+            }
+            
+            alert('Example data loaded! Check all tabs to see the sample data.');
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start with one class when creating new
+            addClass();
+        });
+    </script>
+</body>
+</html>
