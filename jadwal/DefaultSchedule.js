@@ -599,7 +599,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "18:05",
                         },
                     ],
-                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    location: [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
@@ -629,7 +629,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "18:00",
                         },
                     ],
-                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    location: [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1],
                 },
                 {
                     subject: "Bahasa Inggris (Teori)",
@@ -644,7 +644,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:45",
                         },
                     ],
-                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    location: [1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1],
                 },
                 {
                     subject: "Startup Digital (Teori)",
@@ -681,7 +681,11 @@ const DEFAULT_SCHEDULE = {
                 }
             ],
             overrides: [
-                // TODO: Fill overrides for holidays, exams, replacements as needed
+                {
+                    subject: "Startup Digital (Teori)",
+                    date: "19-09-2025",
+                    type: "NOSHOW",
+                },
             ]
         }
     },
