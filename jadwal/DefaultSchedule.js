@@ -684,8 +684,13 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Startup Digital (Teori)",
                     date: "19-09-2025",
-                    type: "NOSHOW",
+                    type: "NOSHOW"
                 },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    date: "30-09-2025",
+                    type: "NOSHOW"
+                }
             ]
         }
     },
