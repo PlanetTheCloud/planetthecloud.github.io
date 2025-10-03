@@ -664,7 +664,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    location: [1, 2, 1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 2, 2],
                 },
             ],
             events: [
@@ -690,6 +690,11 @@ const DEFAULT_SCHEDULE = {
                     subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
                     date: "30-09-2025",
                     type: "NOSHOW"
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    type: "NOSHOW",
+                    date: "02-10-2025"
                 }
             ]
         }
