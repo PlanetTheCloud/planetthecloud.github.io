@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "15-10-2025"
+            updated: "27-10-2025"
         },
         schedules: {
             regularClasses: [
@@ -714,12 +714,134 @@ const DEFAULT_SCHEDULE = {
                 {
                     subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
                     type: "REPLACEMENT",
-                    date: "03-11-2025"
+                    date: "03-11-2025",
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    type: "REPLACEMENT",
+                    date: "04-11-2025",
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
                     type: "REPLACEMENT",
-                    date: "05-11-2025"
+                    date: "05-11-2025",
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    type: "REPLACEMENT",
+                    date: "06-11-2025",
+                },
+                {
+                    subject: "Startup Digital (Teori)",
+                    type: "REPLACEMENT",
+                    date: "07-11-2025",
+                    location: 2
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    type: "REPLACEMENT",
+                    date: "08-11-2025",
+                    location: 2
+                },
+                {
+                    subject: "Persiapan Ujian UAS",
+                    date: {
+                        start: "03-11-2025",
+                        end: "08-11-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Minggu Ujian UAS",
+                    date: {
+                        start: "10-11-2025",
+                        end: "15-11-2025"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Bahasa Indonesia (Teori)",
+                    examType: "UAS",
+                    date: "10-11-2025",
+                    type: "EXAM",
+                    classroom: "ONLINE",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    examType: "UAS",
+                    date: "10-11-2025",
+                    type: "EXAM",
+                    classroom: "ONLINE",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Metodologi Penelitian (Teori)",
+                    examType: "UAS",
+                    date: "11-11-2025",
+                    type: "EXAM",
+                    classroom: "B.T3/L2",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    examType: "UAS",
+                    date: "12-11-2025",
+                    type: "EXAM",
+                    classroom: "B.T3/L2",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Startup Digital (Teori)",
+                    examType: "UAS",
+                    date: "13-11-2025",
+                    type: "EXAM",
+                    classroom: "ONLINE",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    examType: "UAS",
+                    date: "14-11-2025",
+                    type: "EXAM",
+                    classroom: "ONLINE",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
                 },
             ]
         }
