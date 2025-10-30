@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "27-10-2025"
+            updated: "30-10-2025"
         },
         schedules: {
             regularClasses: [
@@ -710,6 +710,12 @@ const DEFAULT_SCHEDULE = {
                     subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
                     type: "NOSHOW",
                     date: "14-10-2025"
+                },
+                {
+                    subject: "Startup Digital (Teori)",
+                    type: "REPLACEMENT",
+                    date: "31-10-2025",
+                    location: 2
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
