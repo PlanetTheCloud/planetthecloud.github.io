@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "30-10-2025"
+            updated: "21-11-2025"
         },
         schedules: {
             regularClasses: [
@@ -848,6 +848,26 @@ const DEFAULT_SCHEDULE = {
                         }
                     ],
                     location: 2,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    type: "NOSHOW",
+                    date: "17-11-2025"
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    type: "NOSHOW",
+                    date: "18-11-2025"
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    type: "NOSHOW",
+                    date: "19-11-2025"
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    type: "NOSHOW",
+                    date: "20-11-2025"
                 },
             ]
         }
