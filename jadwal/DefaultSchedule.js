@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "25-11-2025"
+            updated: "17-12-2025"
         },
         schedules: {
             regularClasses: [
@@ -868,6 +868,14 @@ const DEFAULT_SCHEDULE = {
                     subject: "Bahasa Inggris (Teori)",
                     type: "NOSHOW",
                     date: "20-11-2025"
+                },
+                {
+                    subject: "Libur Natal dan Tahun Baru",
+                    date: {
+                        start: "24-12-2025",
+                        end: "02-01-2026"
+                    },
+                    type: "HOLIDAY"
                 },
             ]
         }
