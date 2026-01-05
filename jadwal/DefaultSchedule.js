@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "17-12-2025"
+            updated: "5-1-2025"
         },
         schedules: {
             regularClasses: [
@@ -876,6 +876,98 @@ const DEFAULT_SCHEDULE = {
                         end: "02-01-2026"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Minggu Ujian UAS",
+                    date: {
+                        start: "19-01-2026",
+                        end: "23-01-2026"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Bahasa Indonesia (Teori)",
+                    examType: "UAS",
+                    date: "19-01-2026",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:05"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    examType: "UAS",
+                    date: "20-01-2026",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Metodologi Penelitian (Teori)",
+                    examType: "UAS",
+                    date: "21-01-2026",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 1,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    examType: "UAS",
+                    date: "22-01-2026",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Startup Digital (Teori)",
+                    examType: "UAS",
+                    date: "22-01-2026",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    examType: "UAS",
+                    date: "23-01-2026",
+                    type: "EXAM",
+                    classroom: "CEK MIKA",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "20:50"
+                        }
+                    ],
+                    location: 1,
                 },
             ]
         }
