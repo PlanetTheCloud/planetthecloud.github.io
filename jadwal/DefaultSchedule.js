@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "12-1-2025"
+            updated: "12-1-2025a"
         },
         schedules: {
             regularClasses: [
@@ -933,6 +933,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Bahasa Inggris (Teori)",
                     type: "REPLACEMENT",
                     date: "14-01-2026",
+                    location: 1,
                 },
                 {
                     subject: "Metodologi Penelitian (Teori)",
@@ -943,6 +944,7 @@ const DEFAULT_SCHEDULE = {
                     subject: "Bahasa Inggris (Teori)",
                     type: "REPLACEMENT",
                     date: "15-01-2026",
+                    location: 2,
                 },
                 {
                     subject: "Startup Digital (Teori)",
