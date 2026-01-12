@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "12-1-2025b"
+            updated: "12-1-2025c"
         },
         schedules: {
             regularClasses: [
@@ -758,7 +758,7 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Minggu Ujian UAS",
+                    subject: "Minggu Ujian UTS",
                     date: {
                         start: "10-11-2025",
                         end: "15-11-2025"
@@ -767,7 +767,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Bahasa Indonesia (Teori)",
-                    examType: "UAS",
+                    examType: "UTS",
                     date: "10-11-2025",
                     type: "EXAM",
                     classroom: "ONLINE",
@@ -781,7 +781,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Bahasa Inggris (Teori)",
-                    examType: "UAS",
+                    examType: "UTS",
                     date: "10-11-2025",
                     type: "EXAM",
                     classroom: "ONLINE",
@@ -795,7 +795,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Metodologi Penelitian (Teori)",
-                    examType: "UAS",
+                    examType: "UTS",
                     date: "11-11-2025",
                     type: "EXAM",
                     classroom: "B.T3/L2",
@@ -809,7 +809,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
-                    examType: "UAS",
+                    examType: "UTS",
                     date: "12-11-2025",
                     type: "EXAM",
                     classroom: "B.T3/L2",
@@ -823,7 +823,7 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Startup Digital (Teori)",
-                    examType: "UAS",
+                    examType: "UTS",
                     date: "13-11-2025",
                     type: "EXAM",
                     classroom: "ONLINE",
@@ -837,7 +837,21 @@ const DEFAULT_SCHEDULE = {
                 },
                 {
                     subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
-                    examType: "UAS",
+                    examType: "UTS",
+                    date: "14-11-2025",
+                    type: "EXAM",
+                    classroom: "ONLINE",
+                    time: [
+                        {
+                            start: "17:30",
+                            end: "19:10"
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
+                    examType: "UTS",
                     date: "14-11-2025",
                     type: "EXAM",
                     classroom: "ONLINE",
