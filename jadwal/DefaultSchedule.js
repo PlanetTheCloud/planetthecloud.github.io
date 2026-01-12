@@ -542,12 +542,12 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "12-1-2025a"
+            updated: "12-1-2025b"
         },
         schedules: {
             regularClasses: [
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     day: [1],
                     type: "REGULAR",
                     classroom: "B.T3/L4",
@@ -602,7 +602,7 @@ const DEFAULT_SCHEDULE = {
                     location: [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
                     day: [3],
                     type: "REGULAR",
                     classroom: "A.P1/L4",
@@ -697,12 +697,12 @@ const DEFAULT_SCHEDULE = {
                     date: "02-10-2025"
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     type: "NOSHOW",
                     date: "06-10-2025"
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
                     type: "NOSHOW",
                     date: "08-10-2025"
                 },
@@ -718,7 +718,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     type: "REPLACEMENT",
                     date: "03-11-2025",
                 },
@@ -728,7 +728,7 @@ const DEFAULT_SCHEDULE = {
                     date: "04-11-2025",
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
                     type: "REPLACEMENT",
                     date: "05-11-2025",
                 },
@@ -836,7 +836,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     examType: "UAS",
                     date: "14-11-2025",
                     type: "EXAM",
@@ -850,7 +850,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     type: "NOSHOW",
                     date: "17-11-2025"
                 },
@@ -860,7 +860,7 @@ const DEFAULT_SCHEDULE = {
                     date: "18-11-2025"
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
                     type: "NOSHOW",
                     date: "19-11-2025"
                 },
@@ -886,7 +886,7 @@ const DEFAULT_SCHEDULE = {
                     type: "HOLIDAY"
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     type: "REPLACEMENT",
                     date: "10-01-2026",
                     time: [
@@ -898,7 +898,7 @@ const DEFAULT_SCHEDULE = {
                     location: 2,
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
                     type: "REPLACEMENT",
                     date: "12-01-2026",
                     time: [
@@ -909,7 +909,7 @@ const DEFAULT_SCHEDULE = {
                     ],
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Praktek)",
                     type: "REPLACEMENT",
                     date: "12-01-2026",
                     time: [
@@ -1003,7 +1003,7 @@ const DEFAULT_SCHEDULE = {
                     location: 1,
                 },
                 {
-                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    subject: "Pengembangan Aplikasi Mobile Back-End (Teori)",
                     examType: "UAS",
                     date: "22-01-2026",
                     type: "EXAM",
