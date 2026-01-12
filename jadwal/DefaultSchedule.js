@@ -542,7 +542,7 @@ const DEFAULT_SCHEDULE = {
             end: "15-09-2026", // 15 Sep 2026
             semester: 5,
             academicYear: "2025/2026",
-            updated: "5-1-2025"
+            updated: "12-1-2025"
         },
         schedules: {
             regularClasses: [
@@ -876,6 +876,79 @@ const DEFAULT_SCHEDULE = {
                         end: "02-01-2026"
                     },
                     type: "HOLIDAY"
+                },
+                {
+                    subject: "Minggu Persiapan UAS",
+                    date: {
+                        start: "12-01-2026",
+                        end: "16-01-2026"
+                    },
+                    type: "HOLIDAY"
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Teori)",
+                    type: "REPLACEMENT",
+                    date: "10-01-2026",
+                    time: [
+                        {
+                            start: "16:00",
+                            end: "17:00",
+                        }
+                    ],
+                    location: 2,
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    type: "REPLACEMENT",
+                    date: "12-01-2026",
+                    time: [
+                        {
+                            start: "17:45",
+                            end: "19:10",
+                        }
+                    ],
+                },
+                {
+                    subject: "Pengembangan Aplikasi Mobil Back-End (Praktek)",
+                    type: "REPLACEMENT",
+                    date: "12-01-2026",
+                    time: [
+                        {
+                            start: "19:30",
+                            end: "21:00",
+                        }
+                    ],
+                },
+                {
+                    subject: "Komunikasi Data dan Jaringan Komputer (Teori)",
+                    type: "REPLACEMENT",
+                    date: "13-01-2026",
+                },
+                {
+                    subject: "Bahasa Indonesia (Teori)",
+                    type: "REPLACEMENT",
+                    date: "14-01-2026",
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    type: "REPLACEMENT",
+                    date: "14-01-2026",
+                },
+                {
+                    subject: "Metodologi Penelitian (Teori)",
+                    type: "REPLACEMENT",
+                    date: "15-01-2026",
+                },
+                {
+                    subject: "Bahasa Inggris (Teori)",
+                    type: "REPLACEMENT",
+                    date: "15-01-2026",
+                },
+                {
+                    subject: "Startup Digital (Teori)",
+                    type: "REPLACEMENT",
+                    date: "17-01-2026",
+                    location: 2,
                 },
                 {
                     subject: "Minggu Ujian UAS",
