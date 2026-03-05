@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Class Schedule System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        /* ===== CSS Variables (defaults — overridden by JS) ===== */
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #1a1a1a;
+            --accent: #dc2626;
+            --accent-hover: #b91c1c;
+            --accent-dark: #7f1d1d;
+            --accent-muted: #991b1b;
+            --accent-glow: rgba(220, 38, 38, 0.1);
+            --accent-text-light: #fca5a5;
+            --card-bg: rgba(0, 0, 0, 0.7);
+            --card-bg-solid: rgba(0, 0, 0, 0.7);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.8);
+            --text-muted: rgba(255,255,255,0.6);
+            --surface-bg: rgba(0, 0, 0, 0.5);
+            --input-bg: rgba(0, 0, 0, 0.5);
+            --ended-bg: #1f2937;
+            --ended-border: #4b5563;
+            --ended-text: #9ca3af;
+        }
+
+        [x-cloak] { display: none !important; }
+
+        /* ===== Layout ===== */
+        body.gradient-bg {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
+            background-attachment: fixed;
+            min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+        .glass-effect {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--accent);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        .bg-pattern {
+            background-image:
+                radial-gradient(circle at 25px 25px, var(--accent-glow) 2px, transparent 0),
+                radial-gradient(circle at 75px 75px, var(--accent-glow) 2px, transparent 0);
+            background-size: 100px 100px;
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .animate-fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== Theme-aware utility classes ===== */
+        /* Text */
+        .t-text           { color: var(--text-primary) !important; }
+        .t-text-secondary  { color: var(--text-secondary) !important; }
+        .t-text-muted      { color: var(--text-muted) !important; }
+        .t-ended-text      { color: var(--ended-text) !important; }
+
+        /* Backgrounds */
+        .t-accent-bg        { background-color: var(--accent) !important; }
+        .t-accent-bg-hover:hover { background-color: var(--accent-hover) !important; }
+        .t-accent-dark-bg   { background-color: var(--accent-dark) !important; }
+        .t-accent-muted-bg  { background-color: var(--accent-muted) !important; }
+        .t-card-bg          { background: var(--card-bg) !important; }
+        .t-surface-bg       { background: var(--surface-bg) !important; }
+        .t-input-bg         { background: var(--input-bg) !important; }
+        .t-ended-bg         { background-color: var(--ended-bg) !important; }
+
+        /* Borders */
+        .t-accent-border      { border-color: var(--accent) !important; }
+        .t-accent-dark-border { border-color: var(--accent-dark) !important; }
+        .t-ended-border       { border-color: var(--ended-border) !important; }
+
+        /* Accent text */
+        .t-accent-text       { color: var(--accent) !important; }
+        .t-accent-light-text { color: var(--accent-text-light) !important; }
+
+        /* Focus */
+        .t-accent-focus:focus {
+            outline: none !important;
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 0 3px var(--accent-glow) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg bg-pattern">
+    <div x-data="scheduleApp()" x-cloak class="min-h-screen">
+
+        <!-- ==================== Navigation ==================== -->
+        <nav class="glass-effect sticky top-0 z-50 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <img src="https://i.imgur.com/uKHbusX.png" alt="Logo" class="h-10 w-auto">
+                        <h1 class="ml-3 text-xl font-bold t-text">Class Schedule</h1>
+                    </div>
+
+                    <!-- Desktop nav -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button @click="setActiveView('today')"
+                                :class="activeView === 'today' ? 't-accent-bg' : 't-accent-bg-hover'"
+                                class="px-4 py-2 rounded-lg text-white transition-all duration-200">
+                            <i class="fas fa-calendar-day mr-2"></i>Today
+                        </button>
+                        <button @click="setActiveView('all')"
+                                :class="activeView === 'all' ? 't-accent-bg' : 't-accent-bg-hover'"
+                                class="px-4 py-2 rounded-lg text-white transition-all duration-200">
+                            <i class="fas fa-calendar mr-2"></i>All Schedule
+                        </button>
+                        <!-- Dark/Light toggle -->
+                        <button @click="setMode(currentMode === 'dark' ? 'light' : 'dark')"
+                                class="p-2 rounded-lg t-text hover:opacity-80 transition-all duration-200"
+                                :title="currentMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+                            <i class="fas" :class="currentMode === 'dark' ? 'fa-sun' : 'fa-moon'"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile hamburger -->
+                    <div class="md:hidden flex items-center gap-2">
+                        <button @click="setMode(currentMode === 'dark' ? 'light' : 'dark')"
+                                class="p-2 rounded-lg t-text hover:opacity-80 transition-all duration-200">
+                            <i class="fas" :class="currentMode === 'dark' ? 'fa-sun' : 'fa-moon'"></i>
+                        </button>
+                        <button @click="mobileMenuOpen = !mobileMenuOpen"
+                                class="t-text hover:opacity-80 p-2 rounded-lg">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile drawer -->
+            <div x-show="mobileMenuOpen" x-cloak
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 transform -translate-y-2"
+                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                 class="md:hidden t-card-bg backdrop-blur-md t-accent-border border-t">
+                <div class="px-4 py-2 space-y-1">
+                    <button @click="setActiveView('today'); mobileMenuOpen = false"
+                            :class="activeView === 'today' ? 't-accent-bg' : ''"
+                            class="w-full text-left px-3 py-2 text-white rounded-lg t-accent-bg-hover">
+                        <i class="fas fa-calendar-day mr-2"></i>Today's Schedule
+                    </button>
+                    <button @click="setActiveView('all'); mobileMenuOpen = false"
+                            :class="activeView === 'all' ? 't-accent-bg' : ''"
+                            class="w-full text-left px-3 py-2 text-white rounded-lg t-accent-bg-hover">
+                        <i class="fas fa-calendar mr-2"></i>All Schedule
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ==================== Schedule Code Input ==================== -->
+        <div x-show="!metadata" class="max-w-4xl mx-auto p-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold t-text mb-4">Class Schedule Information System</h2>
+                <p class="t-text-secondary">Please enter your schedule code below and press Apply</p>
+                <p class="t-text-muted text-sm">Try: "6-IFBSORE-2627"</p>
+            </div>
+            <div class="max-w-md mx-auto">
+                <form @submit.prevent="handleScheduleCode" class="space-y-4">
+                    <div>
+                        <input type="text"
+                               x-model="scheduleCodeInput"
+                               placeholder="Enter schedule code"
+                               class="w-full px-4 py-3 t-input-bg backdrop-blur-md t-text border t-accent-border rounded-lg t-accent-focus transition-all duration-200"
+                               style="color: var(--text-primary);">
+                        <div x-show="scheduleCodeError" class="mt-2 t-accent-light-text text-sm">
+                            <i class="fas fa-exclamation-circle mr-1"></i>
+                            Schedule code not found or invalid
+                        </div>
+                    </div>
+                    <button type="submit"
+                            class="w-full t-accent-bg t-accent-bg-hover text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 backdrop-blur-md border t-accent-border">
+                        <i class="fas fa-check mr-2"></i>Apply
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Noscript fallback -->
+        <noscript>
+            <div class="max-w-4xl mx-auto p-6">
+                <div class="t-accent-bg bg-opacity-20 border t-accent-border rounded-lg p-4 text-center text-white">
+                    <h3 class="text-lg font-semibold mb-2">JavaScript Required</h3>
+                    <p>This application requires JavaScript to be enabled in your browser.</p>
+                </div>
+            </div>
+        </noscript>
+
+        <!-- ==================== Main Content ==================== -->
+        <div x-show="metadata" x-cloak class="max-w-7xl mx-auto p-6">
+
+            <!-- Metadata header -->
+            <div class="text-center mb-8 animate-fade-in">
+                <h1 class="text-4xl font-bold t-text mb-2" x-text="metadata?.major"></h1>
+                <p class="t-text-secondary">
+                    <span x-text="`Semester ${metadata?.semester}, ${metadata?.class}, ${metadata?.academicYear}`"></span>
+                </p>
+            </div>
+
+            <!-- ========== Today's View ========== -->
+            <div x-show="activeView === 'today'" class="space-y-6 animate-fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                    <!-- Left: schedule cards -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="glass-effect rounded-xl p-6 card-hover">
+                            <h2 class="text-2xl font-bold t-text mb-4 flex items-center">
+                                <i class="fas fa-calendar-day mr-3 t-accent-text"></i>
+                                <span x-text="formatDate(selectedDate)"></span>
+                            </h2>
+                            <div class="space-y-4" x-html="renderTodaySchedule()"></div>
+                        </div>
+
+                        <!-- Upcoming -->
+                        <div x-show="upcomingSchedule" class="glass-effect rounded-xl p-6 card-hover">
+                            <h2 class="text-2xl font-bold t-text mb-4 flex items-center">
+                                <i class="fas fa-clock mr-3 t-accent-text"></i>
+                                Next Classes
+                            </h2>
+                            <div class="space-y-4" x-html="renderUpcomingSchedule()"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: sidebar -->
+                    <div class="space-y-6">
+
+                        <!-- Settings -->
+                        <div class="glass-effect rounded-xl p-6 card-hover">
+                            <h3 class="text-lg font-semibold t-text mb-4 flex items-center">
+                                <i class="fas fa-cog mr-2 t-accent-text"></i>Settings
+                            </h3>
+                            <div class="space-y-4">
+                                <!-- Date picker -->
+                                <div>
+                                    <label class="block t-text text-sm font-medium mb-2">View schedule for date:</label>
+                                    <input type="date"
+                                           x-model="selectedDateString"
+                                           @change="handleDateChange"
+                                           class="w-full px-3 py-2 t-input-bg backdrop-blur-md border t-accent-border rounded-lg t-accent-focus"
+                                           style="color: var(--text-primary);">
+                                </div>
+                                <!-- Code input -->
+                                <div>
+                                    <label class="block t-text text-sm font-medium mb-2">Change schedule code:</label>
+                                    <form @submit.prevent="handleScheduleCode" class="flex gap-2">
+                                        <input type="text"
+                                               x-model="scheduleCodeInput"
+                                               placeholder="Enter new code"
+                                               class="flex-1 px-3 py-2 t-input-bg backdrop-blur-md border t-accent-border rounded-lg t-accent-focus text-sm"
+                                               style="color: var(--text-primary);">
+                                        <button type="submit"
+                                                class="px-3 py-2 t-accent-bg t-accent-bg-hover text-white font-medium rounded-lg transition-all duration-200 text-sm">
+                                            Apply
+                                        </button>
+                                    </form>
+                                </div>
+                                <!-- Theme picker -->
+                                <div>
+                                    <label class="block t-text text-sm font-medium mb-2">Theme:</label>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <template x-for="(theme, key) in themes" :key="key">
+                                            <button @click="setTheme(key)"
+                                                    :class="currentTheme === key ? 'ring-2 ring-offset-1 t-accent-border' : 'border-gray-600'"
+                                                    class="flex items-center gap-2 px-2 py-1.5 rounded-lg t-surface-bg border hover:opacity-80 transition-all">
+                                                <span class="w-4 h-4 rounded-full flex-shrink-0" :style="`background-color: ${theme.preview}`"></span>
+                                                <span class="t-text text-xs truncate" x-text="theme.name"></span>
+                                            </button>
+                                        </template>
+                                    </div>
+                                </div>
+                                <!-- Mode toggle -->
+                                <div>
+                                    <label class="block t-text text-sm font-medium mb-2">Mode:</label>
+                                    <div class="flex gap-2">
+                                        <button @click="setMode('dark')"
+                                                :class="currentMode === 'dark' ? 't-accent-bg text-white' : 't-surface-bg t-text border border-gray-600'"
+                                                class="flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-center gap-2">
+                                            <i class="fas fa-moon"></i> Dark
+                                        </button>
+                                        <button @click="setMode('light')"
+                                                :class="currentMode === 'light' ? 't-accent-bg text-white' : 't-surface-bg t-text border border-gray-600'"
+                                                class="flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-center gap-2">
+                                            <i class="fas fa-sun"></i> Light
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Weekly Meeting Locations -->
+                        <div class="glass-effect rounded-xl p-6 card-hover">
+                            <h3 class="text-lg font-semibold t-text mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2 t-accent-text"></i>
+                                <span x-text="showMoreLocations ? 'Next 14 Days' : 'This Week\'s Locations'"></span>
+                            </h3>
+                            <div class="space-y-2" x-html="renderWeeklyLocations()"></div>
+                            <button @click="toggleShowMore()"
+                                    class="mt-3 w-full text-center text-sm t-accent-light-text hover:opacity-80 transition-colors duration-200">
+                                <i class="fas" :class="showMoreLocations ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                                <span x-text="showMoreLocations ? 'Show less' : 'Show more (14 days)'"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== All Schedule View ========== -->
+            <div x-show="activeView === 'all'" class="space-y-6 animate-fade-in">
+
+                <!-- Warning -->
+                <div class="glass-effect rounded-xl p-4 border-l-4 t-accent-border">
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle t-accent-light-text mr-3"></i>
+                        <div class="t-text">
+                            <h4 class="font-semibold">Potential Inaccuracy</h4>
+                            <p class="text-sm t-text-secondary">Future dates or unannounced holidays may cause data inconsistencies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+
+                    <!-- Metadata table -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <h3 class="text-xl font-bold t-text mb-4">Metadata</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full t-text">
+                                <thead>
+                                    <tr class="t-accent-border border-b">
+                                        <th class="text-left py-2 px-4">Key</th>
+                                        <th class="text-left py-2 px-4">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody x-html="renderMetadataTable()"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Regular classes table -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <h3 class="text-xl font-bold t-text mb-4">Course Data</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full t-text text-sm">
+                                <thead>
+                                    <tr class="t-accent-border border-b">
+                                        <th class="text-left py-2 px-4">Course</th>
+                                        <th class="text-left py-2 px-4">Day</th>
+                                        <th class="text-left py-2 px-4">Classroom</th>
+                                        <th class="text-left py-2 px-4">Start</th>
+                                        <th class="text-left py-2 px-4">End</th>
+                                        <th class="text-left py-2 px-4">Tolerance</th>
+                                    </tr>
+                                </thead>
+                                <tbody x-html="renderRegularClassesTable()"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Location per meeting table -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <h3 class="text-xl font-bold t-text mb-4">Location by Meeting</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full t-text text-sm" x-html="renderLocationPerMeetingTable()"></table>
+                        </div>
+                    </div>
+
+                    <!-- Schedule by date (cached) -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold t-text">Schedule by Date (Cached)</h3>
+                            <button @click="showCachedSchedule = !showCachedSchedule"
+                                    class="text-white text-sm t-accent-bg t-accent-bg-hover px-3 py-1 rounded-lg transition-all duration-200">
+                                <span x-text="showCachedSchedule ? 'Hide' : 'Show'"></span>
+                            </button>
+                        </div>
+                        <div x-show="showCachedSchedule" x-cloak
+                             x-transition:enter="transition ease-out duration-200"
+                             x-transition:enter-start="opacity-0"
+                             x-transition:enter-end="opacity-100">
+                            <div class="overflow-x-auto">
+                                <table class="w-full t-text text-sm">
+                                    <thead>
+                                        <tr class="t-accent-border border-b">
+                                            <th class="text-left py-2 px-3">Date</th>
+                                            <th class="text-left py-2 px-3">Readable</th>
+                                            <th class="text-left py-2 px-3">Start</th>
+                                            <th class="text-left py-2 px-3">End</th>
+                                            <th class="text-left py-2 px-3">Meeting</th>
+                                            <th class="text-left py-2 px-3">Subject</th>
+                                            <th class="text-left py-2 px-3">Location</th>
+                                            <th class="text-left py-2 px-3">Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody x-html="renderCachedScheduleTable()"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== Clear Data ========== -->
+            <div x-show="metadata" class="mt-12 text-center">
+                <button @click="showClearDataConfirm = !showClearDataConfirm"
+                        class="px-4 py-2 t-accent-dark-bg hover:opacity-80 text-white border t-accent-border rounded-lg transition-all duration-200">
+                    <i class="fas fa-cog mr-2"></i>Show/Hide Advanced Settings
+                </button>
+                <div x-show="showClearDataConfirm" x-cloak
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 transform scale-95"
+                     x-transition:enter-end="opacity-100 transform scale-100"
+                     class="mt-4 max-w-sm mx-auto">
+                    <div class="glass-effect rounded-xl p-4">
+                        <button @click="clearAllData"
+                                class="w-full px-4 py-2 t-accent-bg t-accent-bg-hover text-white font-semibold rounded-lg transition-all duration-200">
+                            <i class="fas fa-trash mr-2"></i>Clear All Saved Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== Footer ==================== -->
+        <footer class="mt-16 py-8 border-t t-accent-dark-border">
+            <div class="max-w-7xl mx-auto px-6 text-center t-text-muted text-sm">
+                <p class="font-semibold">Not an official Mikroskil website.</p>
+                <p>Information here is for personal use only. No guarantee of completeness, accuracy, and availability. Use at your own risk. Thank you.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="DefaultSchedule.js"></script>
+    <script src="Schedulinator.js"></script>
+    <script src="ModernScheduleApp.js"></script>
+</body>
+</html>
