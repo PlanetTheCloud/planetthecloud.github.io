@@ -86,6 +86,7 @@ function scheduleApp() {
         showMoreLocations: false,
         showCachedSchedule: false,
         _activeTimerIds: new Set(),
+        _dataVersion: 0,
 
         // Theme
         currentTheme: 'crimson',
@@ -215,6 +216,8 @@ function scheduleApp() {
             Schedulinator.init();
             this.metadata = Schedulinator.getMetadata();
             if (this.metadata) {
+                document.title = 'Sistem Informasi Jadwal Kelas - ' + this.scheduleCodeInput;
+                this._dataVersion = (this._dataVersion || 0) + 1;
                 this.loadTodayData();
                 this.setActiveView('today');
             }
@@ -600,6 +603,7 @@ function scheduleApp() {
         },
 
         renderRegularClassesTable() {
+            void this._dataVersion;
             if (!Schedulinator.data.raw.schedules?.regularClasses) return '';
             const dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
             return Schedulinator.data.raw.schedules.regularClasses.flatMap(c =>
@@ -616,6 +620,7 @@ function scheduleApp() {
         },
 
         renderLocationPerMeetingTable() {
+            void this._dataVersion;
             const classes = Schedulinator.data.raw.schedules?.regularClasses;
             if (!classes) return '';
 
@@ -645,6 +650,7 @@ function scheduleApp() {
         },
 
         renderCachedScheduleTable() {
+            void this._dataVersion;
             const cached = Schedulinator.data.cached;
             if (!cached) return '';
 
@@ -677,8 +683,9 @@ function scheduleApp() {
         // ========================
 
         getLocationColorClass(colorName) {
+            const isLight = this.currentMode === 'light';
             const map = {
-                'success': 'bg-white text-black',
+                'success': isLight ? 'bg-gray-200 text-gray-800 border border-gray-400' : 'bg-white text-black',
                 'primary': 't-accent-bg text-white',
                 'danger': 't-accent-dark-bg text-white'
             };

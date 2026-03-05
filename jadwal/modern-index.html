@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Class Schedule System</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sistem Informasi Jadwal Kelas</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -105,19 +105,18 @@
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
                         <img src="https://i.imgur.com/uKHbusX.png" alt="Logo" class="h-10 w-auto">
-                        <h1 class="ml-3 text-xl font-bold t-text">Class Schedule</h1>
                     </div>
 
                     <!-- Desktop nav -->
                     <div class="hidden md:flex items-center space-x-4">
                         <button @click="setActiveView('today')"
-                                :class="activeView === 'today' ? 't-accent-bg' : 't-accent-bg-hover'"
-                                class="px-4 py-2 rounded-lg text-white transition-all duration-200">
+                                :class="activeView === 'today' ? 't-accent-bg text-white' : 't-accent-bg-hover t-text'"
+                                class="px-4 py-2 rounded-lg transition-all duration-200">
                             <i class="fas fa-calendar-day mr-2"></i>Today
                         </button>
                         <button @click="setActiveView('all')"
-                                :class="activeView === 'all' ? 't-accent-bg' : 't-accent-bg-hover'"
-                                class="px-4 py-2 rounded-lg text-white transition-all duration-200">
+                                :class="activeView === 'all' ? 't-accent-bg text-white' : 't-accent-bg-hover t-text'"
+                                class="px-4 py-2 rounded-lg transition-all duration-200">
                             <i class="fas fa-calendar mr-2"></i>All Schedule
                         </button>
                         <!-- Dark/Light toggle -->
@@ -150,13 +149,13 @@
                  class="md:hidden t-card-bg backdrop-blur-md t-accent-border border-t">
                 <div class="px-4 py-2 space-y-1">
                     <button @click="setActiveView('today'); mobileMenuOpen = false"
-                            :class="activeView === 'today' ? 't-accent-bg' : ''"
-                            class="w-full text-left px-3 py-2 text-white rounded-lg t-accent-bg-hover">
+                            :class="activeView === 'today' ? 't-accent-bg text-white' : 't-text'"
+                            class="w-full text-left px-3 py-2 rounded-lg t-accent-bg-hover">
                         <i class="fas fa-calendar-day mr-2"></i>Today's Schedule
                     </button>
                     <button @click="setActiveView('all'); mobileMenuOpen = false"
-                            :class="activeView === 'all' ? 't-accent-bg' : ''"
-                            class="w-full text-left px-3 py-2 text-white rounded-lg t-accent-bg-hover">
+                            :class="activeView === 'all' ? 't-accent-bg text-white' : 't-text'"
+                            class="w-full text-left px-3 py-2 rounded-lg t-accent-bg-hover">
                         <i class="fas fa-calendar mr-2"></i>All Schedule
                     </button>
                 </div>
