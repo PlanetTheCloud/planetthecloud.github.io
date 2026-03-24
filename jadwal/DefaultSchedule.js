@@ -539,7 +539,7 @@ const DEFAULT_SCHEDULE = {
             end: "02-09-2026", // 2 Sep 2026
             semester: 6,
             academicYear: "2026/2027",
-            updated: "03-03-2026x"
+            updated: "24-03-2026x"
         },
         schedules: {
             regularClasses: [
