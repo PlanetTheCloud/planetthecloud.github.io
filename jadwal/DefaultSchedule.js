@@ -685,6 +685,14 @@ const DEFAULT_SCHEDULE = {
                     type: "NOSHOW",
                     date: "05-03-2026"
                 },
+                {
+                    subject: "LIBUR LEBARAN",
+                    date: {
+                        start: "19-03-2026",
+                        end: "25-03-2026"
+                    },
+                    type: "HOLIDAY"
+                },
             ]
         }
     },
