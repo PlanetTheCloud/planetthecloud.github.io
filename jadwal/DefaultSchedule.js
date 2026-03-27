@@ -539,7 +539,7 @@ const DEFAULT_SCHEDULE = {
             end: "02-09-2026", // 2 Sep 2026
             semester: 6,
             academicYear: "2026/2027",
-            updated: "24-03-2026x"
+            updated: "27-03-2026"
         },
         schedules: {
             regularClasses: [
@@ -608,7 +608,7 @@ const DEFAULT_SCHEDULE = {
                             tolerance: "19:40",
                         }
                     ],
-                    location: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    location: [1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 },
                 {
                     subject: "Pengembangan Karakter: Pancasila",
