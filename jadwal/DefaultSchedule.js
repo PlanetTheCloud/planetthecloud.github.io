@@ -676,11 +676,6 @@ const DEFAULT_SCHEDULE = {
             ],
             overrides: [
                 {
-                    subject: "Kriptografi dan Keamanan Informasi",
-                    type: "NOSHOW",
-                    date: "16-03-2026"
-                },
-                {
                     subject: "Pengembangan Karakter: Kewarganegaraan",
                     type: "NOSHOW",
                     date: "05-03-2026"
