@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Key Tools - HCS LCG</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/hacker-new.css" rel="stylesheet">
+</head>
+<body id="keyToolsPage" class="hacker-ui">
+  <nav class="navbar navbar-expand-lg navbar-dark hacker-nav">
+    <div class="container app-shell">
+      <a class="navbar-brand" href="index.html">HCS LCG</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" href="key-tools.html">Key Tools</a>
+          <a class="nav-link" href="encrypt.html">Encrypt &amp; Sign</a>
+          <a class="nav-link" href="decrypt.html">Decrypt &amp; Verify</a>
+          <a class="nav-link" href="compare.html">Compare Images</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container app-shell py-4 py-lg-5">
+    <section class="hero-panel mb-4">
+      <div class="kicker">Operation: forge identity</div>
+      <h1 class="hero-title">Key Tools</h1>
+      <p class="hero-copy">Generate receiver encryption keys and sender signing keys for the hybrid cryptography and steganography pipeline. Public keys move outward; private keys stay sealed.</p>
+    </section>
+
+    <div id="status" class="alert status-line d-none" role="alert"></div>
+
+    <div class="key-grid">
+      <div class="card terminal-panel">
+        <div class="card-header">
+          <span class="terminal-label">ECDH P-256 Encryption Keys</span>
+        </div>
+        <div class="card-body field-stack">
+          <button id="generateEcdh" type="button" class="btn btn-primary">Create Public/Private Key Pair for ECDH</button>
+
+          <div>
+            <label class="form-label" for="ecdhPublic">Receiver Public Encryption Key</label>
+            <textarea id="ecdhPublic" class="form-control mb-2" rows="7" readonly></textarea>
+            <div class="d-flex flex-wrap gap-2">
+              <button id="copyEcdhPublic" type="button" class="btn btn-outline-secondary btn-sm">Copy</button>
+              <button id="downloadEcdhPublic" type="button" class="btn btn-outline-success btn-sm">Download</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="ecdhPrivate">Receiver Private Decryption Key</label>
+            <textarea id="ecdhPrivate" class="form-control mb-2" rows="7" readonly></textarea>
+            <div class="d-flex flex-wrap gap-2">
+              <button id="copyEcdhPrivate" type="button" class="btn btn-outline-secondary btn-sm">Copy</button>
+              <button id="downloadEcdhPrivate" type="button" class="btn btn-outline-success btn-sm">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card terminal-panel">
+        <div class="card-header">
+          <span class="terminal-label">Schnorr Signing Keys</span>
+        </div>
+        <div class="card-body field-stack">
+          <button id="generateSchnorr" type="button" class="btn btn-primary">Create Public/Private Key Pair for Schnorr</button>
+
+          <div>
+            <label class="form-label" for="schnorrPublic">Sender Public Verification Key</label>
+            <textarea id="schnorrPublic" class="form-control mb-2" rows="7" readonly></textarea>
+            <div class="d-flex flex-wrap gap-2">
+              <button id="copySchnorrPublic" type="button" class="btn btn-outline-secondary btn-sm">Copy</button>
+              <button id="downloadSchnorrPublic" type="button" class="btn btn-outline-success btn-sm">Download</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="schnorrPrivate">Sender Private Signing Key</label>
+            <textarea id="schnorrPrivate" class="form-control mb-2" rows="7" readonly></textarea>
+            <div class="d-flex flex-wrap gap-2">
+              <button id="copySchnorrPrivate" type="button" class="btn btn-outline-secondary btn-sm">Copy</button>
+              <button id="downloadSchnorrPrivate" type="button" class="btn btn-outline-success btn-sm">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/schnorr.js"></script>
+  <script src="js/core/stego.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/key-tools.js"></script>
+</body>
+</html>

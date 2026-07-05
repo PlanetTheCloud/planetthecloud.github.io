@@ -1,0 +1,40 @@
+body {
+  background: #f5f7fb;
+}
+
+textarea,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: .875rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.app-shell {
+  max-width: 1180px;
+}
+
+.preview-img {
+  max-height: 320px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.trace-table-wrap {
+  max-height: 360px;
+  overflow: auto;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
