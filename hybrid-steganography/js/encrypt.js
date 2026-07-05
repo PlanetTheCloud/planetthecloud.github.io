@@ -20,6 +20,76 @@
       $(id).textContent = H.formatJson(value);
     }
 
+    function clearEmbeddedData() {
+      [
+        'embeddedStageMap',
+        'embeddedStageABootstrap',
+        'embeddedStageAHeader',
+        'embeddedStageBBody',
+        'embeddedNotEmbedded'
+      ].forEach((id) => {
+        const el = $(id);
+        if (el) el.textContent = '';
+      });
+    }
+
+    function renderEmbeddedData(result) {
+      showJson('embeddedStageMap', {
+        note: 'Embedded data is split by stage. Stage A is public fixed RGB 1-LSB metadata. Stage B is AES-GCM ciphertext plus authentication tag routed by modulo-prime pixel order with HKDF-derived LCG S1/S2 selection.',
+        stageA: {
+          visibility: 'public',
+          route: 'fixed sequential RGB, 1 LSB',
+          contains: [
+            'bootstrap',
+            'public header'
+          ]
+        },
+        stageB: {
+          visibility: 'encrypted',
+          route: result.header.stego.bodyMode.pixelOrder,
+          channelSelection: 'LCG-S1',
+          bitCountSelection: 'LCG-S2',
+          byteLength: result.encryptedBodyBytes.length
+        }
+      });
+
+      showJson('embeddedStageABootstrap', {
+        stage: 'A',
+        section: 'public bootstrap',
+        route: 'fixed sequential RGB, 1 LSB',
+        data: result.embed.bootstrap
+      });
+
+      showJson('embeddedStageAHeader', {
+        stage: 'A',
+        section: 'public header',
+        route: 'fixed sequential RGB, 1 LSB',
+        data: result.header
+      });
+
+      showJson('embeddedStageBBody', {
+        stage: 'B',
+        section: 'encrypted body',
+        route: result.header.stego.bodyMode.pixelOrder,
+        modulo: result.header.stego.bodyMode.modulo,
+        lcg: result.header.stego.bodyMode.lcg,
+        encoding: 'base64',
+        byteLength: result.encryptedBodyBytes.length,
+        encryptedBodyB64: H.bytesToBase64(result.encryptedBodyBytes)
+      });
+
+      showJson('embeddedNotEmbedded', {
+        notEmbedded: [
+          'receiver private ECDH key',
+          'sender private Schnorr key',
+          'ECDH shared secret',
+          'AES-GCM key',
+          'HKDF-derived LCG stego seed',
+          'plaintext message'
+        ]
+      });
+    }
+
     function formatNumber(value, digits = 0) {
       if (value === Infinity || value === 'Infinity') return 'Infinity';
       if (typeof value !== 'number') return value;
@@ -125,7 +195,6 @@
           <td>${residue}</td>
           <td>${entry.pixelIndex}</td>
           <td>${entry.x}, ${entry.y}</td>
-          <td>${bodyMode.pixelOrder}</td>
         `;
         tbody.appendChild(row);
       }
@@ -136,7 +205,7 @@
       $('stegoPreview').classList.add('d-none');
       $('metricsSummary').textContent = '';
       $('metrics').textContent = '';
-      $('embeddedData').textContent = '';
+      clearEmbeddedData();
       $('traceRows').textContent = '';
       const moduloRows = $('moduloRows');
       if (moduloRows) moduloRows.textContent = '';
@@ -239,24 +308,7 @@
         renderMetricsSummary(rawMetrics);
         showJson('metrics', rawMetrics);
 
-        showJson('embeddedData', {
-          note: 'The bootstrap and publicHeader are embedded in Stage A fixed RGB 1-LSB and are not encrypted. Stage B uses modulo-prime pixel ordering plus LCG S1/S2 channel and bit-count selection. The LCG seed/state is derived from ECDH/HKDF and is not embedded. The encryptedBodyB64 is the AES-GCM ciphertext plus authentication tag embedded in Stage B.',
-          stageA_publicBootstrap: result.embed.bootstrap,
-          stageA_publicHeader: result.header,
-          stageB_encryptedBody: {
-            encoding: 'base64',
-            byteLength: result.encryptedBodyBytes.length,
-            encryptedBodyB64: H.bytesToBase64(result.encryptedBodyBytes)
-          },
-          notEmbedded: [
-            'receiver private ECDH key',
-            'sender private Schnorr key',
-            'ECDH shared secret',
-            'AES-GCM key',
-            'HKDF-derived LCG stego seed',
-            'plaintext message'
-          ]
-        });
+        renderEmbeddedData(result);
 
         renderModuloPixelOrder(result.embed.trace, result.header);
 

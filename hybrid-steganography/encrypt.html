@@ -139,7 +139,68 @@
             <span class="terminal-label">Embedded Data</span>
           </div>
           <div class="card-body">
-            <pre id="embeddedData" class="output-console p-3 mb-0"></pre>
+            <div class="accordion" id="embeddedDataAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#embeddedStageMapPanel" aria-expanded="true" aria-controls="embeddedStageMapPanel">
+                    Stage Map
+                  </button>
+                </h2>
+                <div id="embeddedStageMapPanel" class="accordion-collapse collapse show" data-bs-parent="#embeddedDataAccordion">
+                  <div class="accordion-body">
+                    <pre id="embeddedStageMap" class="output-console p-3 mb-0"></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#embeddedStageABootstrapPanel" aria-expanded="false" aria-controls="embeddedStageABootstrapPanel">
+                    Stage A - Bootstrap
+                  </button>
+                </h2>
+                <div id="embeddedStageABootstrapPanel" class="accordion-collapse collapse" data-bs-parent="#embeddedDataAccordion">
+                  <div class="accordion-body">
+                    <pre id="embeddedStageABootstrap" class="output-console p-3 mb-0"></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#embeddedStageAHeaderPanel" aria-expanded="false" aria-controls="embeddedStageAHeaderPanel">
+                    Stage A - Public Header
+                  </button>
+                </h2>
+                <div id="embeddedStageAHeaderPanel" class="accordion-collapse collapse" data-bs-parent="#embeddedDataAccordion">
+                  <div class="accordion-body">
+                    <pre id="embeddedStageAHeader" class="output-console p-3 mb-0"></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#embeddedStageBBodyPanel" aria-expanded="false" aria-controls="embeddedStageBBodyPanel">
+                    Stage B - Encrypted Body
+                  </button>
+                </h2>
+                <div id="embeddedStageBBodyPanel" class="accordion-collapse collapse" data-bs-parent="#embeddedDataAccordion">
+                  <div class="accordion-body">
+                    <pre id="embeddedStageBBody" class="output-console p-3 mb-0"></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#embeddedNotEmbeddedPanel" aria-expanded="false" aria-controls="embeddedNotEmbeddedPanel">
+                    Not Embedded
+                  </button>
+                </h2>
+                <div id="embeddedNotEmbeddedPanel" class="accordion-collapse collapse" data-bs-parent="#embeddedDataAccordion">
+                  <div class="accordion-body">
+                    <pre id="embeddedNotEmbedded" class="output-console p-3 mb-0"></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -156,7 +217,6 @@
                     <th>g^i mod P</th>
                     <th>Pixel Index</th>
                     <th>Coordinate</th>
-                    <th>Order</th>
                   </tr>
                 </thead>
                 <tbody id="moduloRows"></tbody>
